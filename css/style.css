@@ -1,0 +1,31 @@
+/* reset */
+* {margin: 0 auto;}
+ul > li {list-style: none;}
+a {color: #333; text-decoration: none;}
+.clearfix::before, .clearfix::after {display: block; content: ''; clear: both;}
+
+/* layout */
+#wrapper {width: 1000px; height: 1000px; background-color: #ccc; margin: 0 auto;}
+#header {height: 100px; background-color: #eee;}
+#banner {}
+#content1 {}
+#content2 {}
+#footer {}
+
+/* header */
+#header h1 {float: left}
+#header h1 img {width: 200px; height: 80px; padding-top: 10px;}
+#header .nav {float: right;}
+#header .nav ul{}
+#header .nav li{float: left;}
+#header .nav li a{display: block; padding: 35px 15px; color: inherit;}
+
+/* banner */
+#banner {}
+#banner img {width: 100%; height: 400px;}
+
+/* content1 */
+#content1 {margin-top: 15px;}
+#content1 .notice{float: left; width: 49%; margin-right: 2%; background-color: #777; height: 200px;}
+#content1 .ad {float: left; width: 49%; margin-right: 0; background-color: #444; height: 200px;}
+#content1 .ad img {width: 100%; height: 100%;}

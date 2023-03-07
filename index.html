@@ -4,26 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @font-face {
-            font-family: "Galmuri11";
-            src: url("assets/fonts/Galmuri11.ttf") format("truetype");
-            font-weight: normal;
-        }
-        a {
-            font-family: 'Galmuri11', serif;
-        };
-        
-    </style>
-    <script type = "module" defer = "defer" src="javascript/fileInput.js">
-    </script>
+    <title>롯데월드</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--script type = "module" defer = "defer" src="javascript/fileInput.js">
+    </script-->
 </head>
 <body>
-    <input type = "file" id = "file_uploads" accept=".txt" multiple>
-    <div class="preview">
-        <p></p>
+    <div id = "wrapper">
+        <header id = "header" class="clearfix">
+            <h1><a href="#"><img src="assets/images/logo.png" alt="롯데월드"></a></h1>
+            <nav class = "nav">
+                <ul class = "clearfix">
+                    <li><a href="#">즐길거리</a></li>
+                    <li><a href="#">요금/우대혜택</a></li>
+                    <li><a href="#">참여프로그램</a></li>
+                    <li><a href="#">이용가이드</a></li>
+                    <li><a href="#">소통서비스</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+
+        <section id = "banner">
+            <img src= "assets/images/banner01.png" alt="1번 배너">
+        </section>
+        <section id = "content1" class="clearfix">
+            <div class = "notice">
+
+            </div>
+            <div class = "ad">
+                <img src="assets/images/banner02.png" alt= "온종일 혜택">
+            </div>
+        </section>
+        <section id = "content2"></section>
+        <footer id = "footer"></footer>
     </div>
-    <!--img src="assets/images/11_Nov_22_19_24_크로키.png" alt="#"-->
 </body>
 </html>
