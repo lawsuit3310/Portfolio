@@ -12,6 +12,9 @@
                 font-family: "Esamanru Light";
                 src: url(assets/fonts/esamanru_TTF/esamanru\ Light.ttf);
             }
+            :root{
+                --A4Height : 1245px;
+            }
 
             * {width: inherit ; margin : 0 auto; font-family: "Esamanru Light";}
             
@@ -21,7 +24,8 @@
                 padding: 20px 10px;
             }
             .context {
-                width: 800px; height: 2000px;
+                width: 800px; height: var(--A4Height);
+                margin-bottom: 1px;
                 background-color: #eee;
             }
             /* header */
@@ -139,6 +143,9 @@
                 <!--후기-->
             </div>
             <footer class = "footer"></footer>
+        </div>
+        <div class = "testContext" style =  "margin : 0 auto; background-color: black; width: 800px; height: 1245px;">
+
         </div>
     </body>
 </html>
