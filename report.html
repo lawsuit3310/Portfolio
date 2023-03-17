@@ -9,6 +9,10 @@
                 src: url(assets/fonts/esamanru_TTF/esamanru\ Bold.ttf);
             }
             @font-face {
+                font-family: "esamanru Medium";
+                src: url(assets/fonts/esamanru_TTF/esamanru\ Medium.ttf);
+            }
+            @font-face {
                 font-family: "Esamanru Light";
                 src: url(assets/fonts/esamanru_TTF/esamanru\ Light.ttf);
             }
@@ -16,8 +20,13 @@
                 --A4Height : 1245px;
             }
 
-            * {width: inherit ; margin : 0 auto; font-family: "Esamanru Light";}
+            * {width: inherit ; margin : 0 auto; font-family: "Esamanru Medium";}
             
+            .clearfix::before, .clearfix::after{
+                display: block;
+                clear: both;
+            }
+
             h1{
                 margin-left: 10px;
                 font-family: "Esamanru Bold";
@@ -72,20 +81,32 @@
                 width: inherit; height: inherit;
                 opacity: 20%;
                 filter: blur(5px);
-            }
+            }            
 
             /* indicators */
             .indicators {
-                width: inherit; height: 300px;
+                width: inherit; height: 500px;
+                margin-top: 45px;
                 background-color: #fff;
             }
             .indicators > ul{
-
+                margin-top: 20px;
+                width: 300px;
+                float: left;
             }
             .indicators > ul > li{
+                margin : 20px 0px;
                 margin-left: 20px;
-                list-style: none;
+                list-style: disc;
                 line-height: 30px;
+                font-family: "Esamanru Light";
+            }
+            .indicators > div {
+                background-color: white;
+                margin-top: 20px;
+                height: 400px; width:420px;
+                line-height: 25px;
+                float:left;
             }
         </style>
     </head>
@@ -123,15 +144,21 @@
                 </table>
                 
             </div>
-            <div class = "indicators">
+            <div class = "indicators clearfix" class>
                 <!--플레이 기준-->
                 <h1>2. 플레이 기준</h1>
                 <ul>
-                    <li>응애</li>
-                    <li>응애</li>
-                    <li>응애</li>
-                    <li>응애</li>
+                    <li>회차 당 플레이 타임</li>
+                    <li>회차 당 던진 나이프의 개수</li>
+                    <li>회차 당 얻은 사과(재화)의 갯수</li>
+                    <li>회차 당 도달한 스테이지</li>
                 </ul>
+                <div>
+                    <ol>
+                        <li>게임을 시작해서 게임오버 당하기까지를 1회차로서 정한다</li>
+                        <li>매 회차마다 변하는 요소들을 기준으로 해서 게임 플레이를 기록하여 그 기록들을 분석해 플레이 결과에 대한 평가를 진행 할 것이다.</li>
+                    </ol>
+                </div>
             </div>
             <div class = "summary">
                 <!--플레이 결과의 요약-->
