@@ -9,7 +9,7 @@
                 src: url(assets/fonts/esamanru_TTF/esamanru\ Bold.ttf);
             }
             @font-face {
-                font-family: "esamanru Medium";
+                font-family: "Esamanru Medium";
                 src: url(assets/fonts/esamanru_TTF/esamanru\ Medium.ttf);
             }
             @font-face {
@@ -17,30 +17,31 @@
                 src: url(assets/fonts/esamanru_TTF/esamanru\ Light.ttf);
             }
             :root{
-                --A4Height : 1245px;
+                --A4Height : 1210px;
             }
 
             * {width: inherit ; margin : 0 auto; font-family: "Esamanru Medium";}
             
-            .clearfix::before, .clearfix::after{
-                display: block;
-                clear: both;
+            .clearfix{
+                clear: both; display: block;
             }
 
             h1{
                 margin-left: 10px;
                 font-family: "Esamanru Bold";
-                padding: 20px 10px;
+                padding: 20px 10px; font-size: 40px;
             }
-            .context {
+
+            /*page 1*/
+
+            .context_1 {
                 width: 800px; height: var(--A4Height);
                 margin-bottom: 1px;
-                background-color: #eee;
+                background-color: #313;
             }
             /* header */
             .header{
                 height: 100px;
-                margin-top: 10px;
                 background-color: #313;
             }
             .header > h1 {
@@ -50,7 +51,7 @@
             }
             /* introduction */
             .introduction{
-                height: 500px;
+                height: 550px;
                 background-color: #fff;
             }
             .introduction>table {
@@ -66,7 +67,7 @@
             .reason{
                 width: inherit; height: 100px;
             }
-            tr td {
+            tr td, th {
                 border : 1px solid black;
                 padding : 20px;
             }
@@ -85,8 +86,8 @@
 
             /* indicators */
             .indicators {
-                width: inherit; height: 500px;
-                margin-top: 45px;
+                width: inherit; height: 450px;
+                padding-top: 40px;
                 background-color: #fff;
             }
             .indicators > ul{
@@ -101,17 +102,126 @@
                 line-height: 30px;
                 font-family: "Esamanru Light";
             }
-            .indicators > div {
-                background-color: white;
-                margin-top: 20px;
-                height: 400px; width:420px;
+            .indicators > div {margin-left: -30px;
+                height: 300px; width:420px;
                 line-height: 25px;
                 float:left;
+            }
+            .indicators > div > ol > li {
+                line-height: 50px;
+            }
+
+            /*page 2*/
+
+            .context_2  {
+                margin : 0 auto; margin-top: 1px;
+                width: 800px; height: var(--A4Height);
+            }
+            
+            .result {
+                height: var(--A4Height); width: inherit;
+                padding-top: 20px;
+
+            }
+            .result > h1 {
+                margin-bottom: 20px;
+            }
+            .playTime > img {
+                float : left; margin-left: 20px;
+                width: 200px;
+            }
+            .playTime > div {
+                padding-top: 15px;
+            }
+            .playTime > div > img {
+                margin-left: 20px;
+                width: 120px;
+            }
+            .playData {
+                background-color: #fff; height: 400px;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            .playData > img {
+                margin-top : 20px; width: 350px;
+            }
+            
+            .statistics {
+                width : 680px;
+                height : 500px;
+            }
+
+            .statistics > ul {
+                margin-top: 10px;
+            } 
+            .statistics > ul > li{
+                float: left; list-style: none; width: auto; margin-left: 20px;
+                font-size: 20px; font-family: "Esamanru Light"; line-height: 35px;
+            }
+            .statistics > ul > li:nth-child(2n){
+                float: right;
+            }
+
+            /*page 3*/
+
+            .context_3  {
+                margin : 0 auto; margin-top: 1px;
+                width: 800px; height: 1190px; padding-top: 20px;
+            }
+
+            .analysis
+            {
+                width: 760px; height: 500px; 
+            }
+            .analysis > h1
+            {
+                margin-bottom: 10px;
+            }
+            .analysis > p
+            {
+                float: left;
+                margin-left: 30px;
+                line-height: 30px;
+                width: 300px;
+            }
+            .analysis > img
+            {
+                float : right; margin-top: 25px;
+                width : 400px;
+            }
+            .analysis > h4
+            {
+                float:right; text-align: center;
+                width: 400px; margin-top: 10px; font-size: 20px;
+                font-weight: lighter; font-family: "Esamanru Light";
+            }
+            .footer{
+                margin-top: 90px;
+                width: inherit; height: 100px;
+                background-color: #313;
+            }
+            
+            /*page 4*/
+
+            .context_4  {
+                margin : 0 auto; margin-top: 1px;
+                width: 800px; height: 1190px; padding-top: 20px;
+            }
+            .review {
+                width: 800px;
+            }
+            .review > p{
+                text-align: center; width: 760ox;
+                line-height: 40px; margin-top: 50px;
+                font-family: "Esamanru Light"; font-size: 20px;
+            }
+            .review > .footer {
+                margin-top: 270px;
             }
         </style>
     </head>
     <body>
-        <div class="context">
+        <div class="context_1">
             <header class = "header">
                 <h1 >내 나이프는 하늘을 뚫을 나이프다!!</h1>
             </header>
@@ -152,27 +262,138 @@
                     <li>회차 당 던진 나이프의 개수</li>
                     <li>회차 당 얻은 사과(재화)의 갯수</li>
                     <li>회차 당 도달한 스테이지</li>
+                    <li style="list-style: none;">등등... </li>
                 </ul>
                 <div>
+                    <h2 style="font-family: Esamanru Medium; font-weight: lighter; margin-bottom: 20px;"> 평가 방법 </h2>
                     <ol>
                         <li>게임을 시작해서 게임오버 당하기까지를 1회차로서 정한다</li>
-                        <li>매 회차마다 변하는 요소들을 기준으로 해서 게임 플레이를 기록하여 그 기록들을 분석해 플레이 결과에 대한 평가를 진행 할 것이다.</li>
+                        <li>매 회차마다 변하는 요소들을 기준으로 게임 플레이를 기록한다.</li>
+                        <li>그 기록들을 분석해 플레이 결과에 대한 평가를 진행한다.</li>
                     </ol>
+                    
+                    <h2 style="font-family: Esamanru Medium; font-weight: lighter; margin: 20px 0;"> 플레이 목표 </h2>
+                    <p style="margin-left: 20px; line-height: 30px;">챌린지 등, 대부분의 콘텐츠가 해금되는 15스테이지 클리어를<br>
+                        목표로 함.</p>
                 </div>
             </div>
+        </div>
+        <div class = "context_2" >
             <div class = "summary">
                 <!--플레이 결과의 요약-->
+                <section class = "result">
+                    <h1>3. 플레이 결과</h1>
+                    <div style = "height: 350px;" class="playtime clearfix">
+                        <img src="assets/images/playtime1stWeek.jpg">
+                        <img src="assets/images/playtime2ndWeek.jpg">
+                        <p style = "float: left; width: 300px; text-align: right; line-height: 40px;">
+                            총 플레이 타임 : <b style="font-size: 30px;">17시간 26분</b><br>
+                            일평균 플레이 타임: <b style="font-size: 30px;">1시간 44분</b><br>
+                        </p>
+                        <div style="float:left; width: 300px; height: 230px; margin-top: 4px; ">
+                            <img src="assets/images/gameLevel.jpg">
+                            <p style="text-align: right; float:right; width: 140px; margin-top: 10px; font-family: Esamanru Light;">◀ 현재 45레벨 달성</p>
+                        </div>
+                    </div>
+                    <div class = "playData">
+                        <img src="assets/images/img_exel_1.png">
+                        <img src="assets/images/img_exel_2.png">
+                        <p style="margin-top: 30px; font-size: 30px;">
+                            → 100회의 플레이를 통한 데이터 수집
+                        </p>
+                    </div>
+
+                    <div class="statistics">
+                        <h1>여러 통계들</h1>
+                        <ul class = "clearfix">
+                            <li>평균 플레이타임 : 0분 58초</li>
+                            <li>회차 당 던진 나이프의 평균 개수 : 108.91개</li>
+                            <li>회차 당 도달한 평균 스테이지 : 9</li>
+                            <li>회차 당 획득한 평균 사과 개수 : 26.42개</li>
+                            <li>가장 게임오버를 많이 당한 스테이지 : 15</li>
+                            <li>플레이타임의 표준 편차 : 66.6초</li>
+                        </ul>
+                    </div>
+                </section>
             </div>
-            <div class = "evaluation">
-                <!--자신의 플레이를 평가-->
+        </div>
+        
+        <div class = "context_3" >
+            <div class="statistics clearfix">
+                <h1>여러 통계들</h1>
+                <ul>
+                    <li>스테이지 당 사용한 나이프의 평균 개수 : 11.67개</li>
+                    <li>도달한 최고 스테이지 : 23</li>
+                    <li style = "margin-top: 10px;">보스 등급별 등장 횟수 및 확률
+                        <table style = "border-collapse: collapse; text-align: center; margin-top: 10px;">
+                            <tr>
+                                <th>등급</th>
+                                <th>등장 횟수 (회)</th>
+                                <th>확률 (%)</th>
+                            </tr>
+                            <tr>
+                                <td>노말</td>
+                                <td>135</td>
+                                <td>91.22%</td>
+                            </tr>
+                            <tr>
+                                <td>레어</td>
+                                <td>6</td>
+                                <td>4.05%</td>
+                            </tr>
+                            <tr>
+                                <td>레전더리</td>
+                                <td>7</td>
+                                <td>4.73%</td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
             </div>
-            <div class = "review">
+
+            <div class = "analysis clearfix">
+                <h1>4. 플레이 기록 분석</h1>
                 <!--후기-->
+                <p>평균적인 플레이타임이 0.58초로, 길지 않은
+                    것으로 나타났다. 하지만, 스테이지가 무한히
+                    반복되는 게임의 특성 상, 각각의 회차마다,<br>
+                    플레이타임이 최소 9초에서 최대 3분이<br>
+                    넘어가는 등 상이하게 나타났다.<br>    
+                    회차당 획득한 사과의 양도 마찬가지로,<br>
+                    평균적으로 획득한 양에 비해 한 번에 90개를
+                    획득한 회차도 존재하지만, 1개도 얻지 못하는
+                    회차도 존재하는 등 결과가 들쭉날쭉하게 나타났다.
+                </p>
+                <img src="assets/images/chart.png">
+                <h4>▲ 각 회차마다 획득한 사과들의 양</h4>
             </div>
             <footer class = "footer"></footer>
         </div>
-        <div class = "testContext" style =  "margin : 0 auto; background-color: black; width: 800px; height: 1245px;">
+        <div class = "context_4" >
+            
+            <h1>5. 후기</h1>
+            <div class = "review">
+                <!--후기-->
+                <p>
+                    "엑셀을 잘 쓰면 회사에 가서 사랑 받는다". 고등학교 때 프로그래밍을<br>
+                    가르쳐주셨던 선생님께서 저에게 해주신 말이였습니다.<br>
+                     그리고 그것을 이번 과제를 통해 여실히 느끼게 되었습니다.<br><br>
 
+                    게임을 분석적으로 플레이 해보면서 데이터를 기록하고,<br>
+                    엑셀을 통해 기록들을 정리하며 통계를 내는,<br>
+                    이 과제를 진행하면서 했던 것들은 무엇 하나 처음 해보는 것들이였습니다.<br><br>
+                    
+                    특히 엑셀을 사용해서 기록을 분석하고 통계를 내는 작업을<br>
+                    자동화 할 수 있던 것이 저에겐 가장 큰 센세이션이였다고 생각합니다.<br><br>
+
+                    앞으로의 남은 학기 동안에 이러한 보고서를<br>
+                    더 작성하게 되리라고 생각합니다. <br><br>
+                    
+                    보고서를 작성할 때마다, 더욱 높은 퀄리티로<br>
+                    문서를 작성할 수 있도록 노력하겠습니다.
+                </p>
+                <footer class = "footer"></footer>
+            </div>
         </div>
     </body>
 </html>
