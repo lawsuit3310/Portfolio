@@ -1,0 +1,228 @@
+<html>
+    <head>
+        <title>
+            [2회 보고서] 202336961_민기홍
+        </title>
+        <style>
+            @font-face {
+                font-family: "Esamanru Bold";
+                src: url(assets/fonts/esamanru_TTF/esamanru\ Bold.ttf);
+            }
+            @font-face {
+                font-family: "Esamanru Medium";
+                src: url(assets/fonts/esamanru_TTF/esamanru\ Medium.ttf);
+            }
+            @font-face {
+                font-family: "Esamanru Light";
+                src: url(assets/fonts/esamanru_TTF/esamanru\ Light.ttf);
+            }
+            :root{
+                --A4Height : 1210px;
+            }
+            .context_1 {
+                width: 800px; height: var(--A4Height);
+                margin-bottom: 1px;
+                background-color: #fff;
+            }
+            h1{
+                margin-left: 10px;
+                font-family: "Esamanru Bold";
+                padding: 20px 10px; font-size: 40px;
+            }        
+            
+            * {width: inherit ; margin : 0 auto; font-family: "Esamanru Medium";}
+            
+            .clearfix{
+                clear: both; display: block;
+            }
+
+            /* header */
+            .header{
+                height: 100px;
+                background-color: rgba(192, 240, 0, 0.8);
+            }
+            .header > h1 {
+                text-align: center; letter-spacing: 3px;
+                padding-top: 28px; font-size: 40px; margin: 0px;
+                color: black; font-weight: lighter;
+            }
+            .introduction{
+                height: 550px;
+                background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)),  url(assets/images/Cut\ the\ rope.png);
+                background-size: cover; 
+            }
+
+            .introduction> table {
+                margin : 20px; font-size: 20px;
+                margin-top: 10px;
+                width: 760px;
+                border : 1px solid black;
+                border-collapse: collapse;
+            }
+            .head {
+                width: 100px;
+                font-weight: bold;
+                font-size: 18px;
+                text-align: center;
+            }
+            .distinction > td, .reason > td{
+                line-height: 30px;
+            }
+            .reason{
+                width: inherit; height: 100px;
+            }
+            tr, td, th {
+                border : 1px solid black;
+                padding : 20px;
+            }
+
+            /* Page 2 */
+            .context_2 {
+                width: 800px; height: var(--A4Height);
+                margin-bottom: 1px;
+            }
+
+            .gameElements {
+                padding-top: 20px;
+            }
+            .gameElements img {
+                width: 100px;
+            }
+            .gameElementsTable {
+                width: 760px; margin-left: 20px;
+                margin-top: 20px;
+                border-collapse: collapse;
+            }
+            .gameElementsTable > tr,td,th {
+                padding : 15px 10px;
+                line-height: 25px;
+            }
+
+            /* Page 3 */
+
+            .context_3 {
+                width: 800px; height: var(--A4Height);
+                margin-bottom: 1px;
+                background-color: #ddd;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="context_1">
+            <header class = "header">
+                <h1>밧줄? 그거 자르는 건가요?</h1>
+            </header>
+            <div class = "introduction">
+                <h1>1. 게임 소개</h1>
+                <table>
+                    <tr>
+                        <td class = "head">게임 제목</td>
+                        <td> Cut the Rope</td>
+                    </tr>
+                    <tr class = "distinction">
+                        <td class = "head">게임 특징</td>
+                        <td>
+                            - 밧줄을 잘라 주인공 캐릭터 <b style = "font-size: 23px;">"얌냠"</b> 에게 도넛을 주어야 하는 게임<br>
+                            - 조작이 간편하고 단순하지만, 쉽지만은 않은 난이도 <br>
+                            - 게임 내에 존재하는 다양한 종류의 기믹들<br>
+                            - 퍼즐이 메인 요소인 게임이지만, 타이밍을 맞추는 것도 적지 않은 비중을 차지함.<br>
+                        </td>
+                    </tr>
+                    <tr class = "reason">
+                        <td class = "head">선정 이유</td>
+                        <td>
+                            - 플랫폼이 모바일로서 쉽게 플레이 가능함 <br>
+                            - 쉽고 심플한 조작 방식을 가지고 있음 </br>
+                            - 한 스테이지를 클리어 하면 다음 스테이지로 넘어가는 방식<br>
+                            - 게임을 다채롭게 해주는 다양한 기믹들<br>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class = "gameElements">
+                <h1>2. 게임 내 구성 요소들</h1>
+                <table class = "gameElementsTable act1">
+                    <tr>
+                        <td class="head"><img src="assets/images/CutTheRope/YamNyam.jpg"></td>
+                        <td>암냠 : 주인공 캐릭터로 이 캐릭터에게 도넛을 먹이면 스테이지를 클리어 할 수 있다.</td>
+                    </tr>
+                    <tr>
+                        <td class="head"><img src="assets/images/CutTheRope/Dounut.jpg"></td>
+                        <td>도넛 : "암냠" 에게 도넛을 먹이기 위해 다양한 기믹들을 활용하는 것이 게임의 주가된다.</td>
+                    </tr>
+                    <tr>
+                        <td class="head"><img src="assets/images/CutTheRope/string.jpg"></td>
+                        <td>압정 : 주위에 푸른 점선으로 그려진 영역이 존재하며, 이 영역으로 들어가면 "밧줄"로 연결된다</td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+        
+        <div class="context_2">
+            <div class = "gameElements">
+                <h1>2. 게임 내 구성 요소들</h1>
+                <table class = "gameElementsTable act2 clearfix">
+                    <tr>
+                        <td class="head"><img src="assets/images/CutTheRope/StringSpider.jpg"></td>
+                        <td>거미 : 게임의 진행 템포를 빠르게 하기 위한 기믹으로 기본적으로는 "압정" 과 같지만,<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            밧줄이 연결되면 거미가 줄을 타고 와서 도넛을 가져가 게임오버 될 수 있다.</td>
+                    </tr>
+                    <tr>
+                        <td class="head"><img style = "width: 60px;" src="assets/images/CutTheRope/stringedDounut.jpg" style = "height: 150px;"></td>
+                        <td>
+                            밧줄 : 도넛과 연결 되면 도넛이 범위 이상으로 가는 것을 막는 역할을 한다.<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            드래그로 끊어 낼 수 있으며, 도넛과 연결된 밧줄이 없으면 도넛이 자유낙하를 하게 된다.<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            또한, 밧줄의 원래 길이보다 길어지면 붉게 변하며 팽팽해지는데, <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            이때 밧줄을 자르면 관성으로 도넛이 날아가게 되며 이를 이용한 기믹도 존재한다.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="head"><img style = "width: 60px; height: 150px;" src="assets/images/CutTheRope/MovingString.jpg" style = "height: 150px;"></td>
+                        <td >줄 고리 : 기본적으로는 압정과 같지만, 정해진 방향으로 움직일 수 있다. <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            이를 통해 밧줄을 늘려 직접 팽팽하게 만드는 것도 가능하다.</td>
+                    </tr>
+                    <tr>
+                        <td class="head"><img src="assets/images/CutTheRope/bubble.jpg"></td>
+                        <td>비눗방울 :  도넛과 닿으면 도넛이 비눗방울 속으로 들어가며, 들어가 있는 동안은<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            계속해서 위로 올라간다. 지나치게 위로 올라가면 게임오버 당할 수 있으며,<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            터치를 통해 방울을 터뜨려 떨어뜨릴 수 있다.</td>
+                    </tr>
+                    <tr>
+                        <td class="head"><img src="assets/images/CutTheRope/balloon.jpg"></td>
+                        <td>
+                            풍선 : 터치를 하여 바람을 뿜어 낼 수 있으며, 뿜어낸 바람으로 도넛에 힘을 가해<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            움직이게 할 수 있다.</td>
+                    </tr>
+                    <tr>
+                        <td class="head"><img src="assets/images/CutTheRope/star.jpg"></td>
+                            <td>별 : 일종의 수집요소로, 도넛을 별에 다가가게 해 획득 할 수 있다. 스테이지마다 3개씩<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            등장하며, 획득한 갯수에 따라 스테이지의 달성도로 표기된다. 게임 템포를 올리기 위한 <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            기믹으로 일정 시간이 지나면 사라지는 별도 존재한다.</td>
+                    </tr>
+                    <tr>
+                        <td class="head"><img style = "width : 50px" src="assets/images/CutTheRope/spike.jpg"></td>
+                        <td>스파이크 : 장애물로 이곳에 도넛이 닿게 되면 부서지면서 게임오버를 당하게 된다.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="context_3">
+            <div class = "gameElements">
+                <h1>3. 게임 플레이 기록</h1>
+
+            </div>
+        </div>
+    </body>
+</html>
