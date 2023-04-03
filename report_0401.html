@@ -17,17 +17,16 @@
                 src: url(assets/fonts/esamanru_TTF/esamanru\ Light.ttf);
             }
             :root{
-                --A4Height : 1210px;
-            }
-            .context_1 {
-                width: 800px; height: var(--A4Height);
-                margin-bottom: 1px;
-                background-color: #fff;
+                --A4Height : 1250px;
             }
             h1{
-                margin-left: 10px;
+                margin-left: 20px;
                 font-family: "Esamanru Bold";
                 padding: 20px 10px; font-size: 40px;
+            }
+            h2{
+                font-size: 30px;
+                margin-bottom: 20px;
             }        
             
             * {width: inherit ; margin : 0 auto; font-family: "Esamanru Medium";}
@@ -36,6 +35,13 @@
                 clear: both; display: block;
             }
 
+            .clearfix::before, .clearfix::after { display: block; clear: both; content: '';}
+
+            /* page 1 */
+            .context_1 {
+                width: 800px; height: var(--A4Height);
+                margin-bottom: 1px;
+            }
             /* header */
             .header{
                 height: 100px;
@@ -102,10 +108,145 @@
 
             .context_3 {
                 width: 800px; height: var(--A4Height);
-                margin-bottom: 1px;
-                background-color: #ddd;
+                margin-bottom: 1px; display: block;
+            }
+
+            .indicators {
+                height: inherit;
+                padding : 20px; padding-bottom: 0px;
+            }
+            .indicators > h1 {
+                margin-left: 0px;
+            }
+            .indicators > ul > li, .indicators > ol > li{
+                line-height: 40px; font-family: Esamanru Light;
+                margin-left: 40px; font-size: 20px;
+            }
+            .indicators > h2 {
+                margin-top: 40px; margin-left: 20px;
+                font-weight: lighter;
+            }
+            .elementList {
+                width: 760px;
+            }
+            .elementList > li {
+                float: left; width: 300px;
+            }
+
+            /* Page 4 */
+            .context_4 {
+                width: 800px; height: var(--A4Height);
+                margin-bottom: 1px; padding-top: 20px;
+            }
+
+            .statistics {
+                width: 800px;
             }
             
+            .statistics > img {
+                width: 370px; margin-top: 40px;
+                float: left; margin-left: 40px;
+            }
+            
+            .statistics > p {
+                float : right; width: 350px; margin-right: 40px;
+                margin-top: 40px; font-size: 20px;
+                text-align: right; line-height: 30px;
+            }
+            .record {
+                width: 800px; margin-top: 80px;
+                margin-left: 40px;
+            }
+
+            .record > img {
+                width: 230px; height: 230px;
+                margin-right: 20px; float:left;
+            }
+
+            .context_4 > h2 {
+                margin-top: 40px; text-align: center;
+            }
+
+            /* Page 5 */
+
+            .context_5 {
+                width: 800px; height: var(--A4Height);
+                margin-bottom: 1px; padding-top: 20px;
+            }
+            .analysis {
+                width: 720px; font-size: 20px; margin-top: 20px;
+                line-height: 35px; font-family: Esamanru Light;
+            }
+            .explaination {
+                margin-top: 50px; padding-right: 20px;
+            }
+            .explaination * {margin-left: 20px;}
+            .explaination img{
+                width: 330px; margin-left: 40px;
+                float: left;
+            }
+            .explaination > p{
+                width: 350px; float:left; margin-left: 30px; 
+                font-family: Esamanru Light; line-height: 30px;
+                padding: 20px; padding-top: 0;
+            }
+            .explaination > ol {
+                float: left; width: 300px;
+            }
+            .explaination > ol >  li {
+                margin-left: 0px; line-height: 30px;
+                font-family: Esamanru Medium;
+                margin-bottom: 20px;
+            }
+            
+            .context_5 > p {
+                width: 760px; margin-top: 30px;
+                line-height: 30px;
+            }
+            
+            .context_6 {
+                width: 800px; height: var(--A4Height);
+                margin-bottom: 1px; padding-top: 20px;
+ 
+                
+            }
+            
+            .context_6 .explaination {
+                margin-top: 30px;
+            }
+            
+            .context_6 .explaination img {
+                margin-top: 0px; margin-bottom: 0px;
+            }
+
+            .context_6 .explaination .explan {
+                float:right; width: 350px;
+                margin-right: 30px; margin-top: -80px;
+            }
+
+            .context_6 .explaination p {
+                width: 100%; float: left;
+                font-family: Esamanru Light; line-height: 30px;
+                padding: 20px; padding-top: 0;
+            }
+            .context_6 .explaination ol {
+                float: left; width: 300px;
+            }
+            .context_6 .explaination  ol   li {
+                margin-left: 0px; line-height: 30px;
+                font-family: Esamanru Medium;
+                margin-bottom: 20px;
+            
+            }
+            .context_6 .explaination h1.conclusion{
+                float: left; width: 300px;
+                margin-top: 120px;
+            }
+            .context_6 .explaination div.conclusion{
+                width: 740px; 
+                height: 150px; float: left; padding: 10px; padding-top: 0;
+                font-size: 18px; line-height: 30px;
+            }
         </style>
     </head>
     <body>
@@ -219,9 +360,156 @@
             </div>
         </div>
         <div class="context_3">
-            <div class = "gameElements">
-                <h1>3. 게임 플레이 기록</h1>
+            <div class = "indicators">
+                <h1>3. 게임 플레이 기준</h1>
+                <ul style = "list-style: '- ';"><br>
+                    <li><b style="font-size: 20px; font-weight: lighter;">스테이지 목표</b> : <br>별을 2개 이상 획득 및 5회 이내로 클리어</li><br>
+                    <li><b style="font-size: 20px; font-weight: lighter;">게임 전체의 목표</b> : <br>"은박지 상자" 스테이지 (3스테이지) 해금 및 별 3개 획득한 스테이지 30개 이상</li><br>
+                </ul>
+                <h2>플레이 중 기록 요소</h2>
+                <ul class = "elementList">
+                    <li>스테이지 당 시도 횟수</li>
+                    <li>스테이지 당 소모 시간</li>
+                    <li>스테이지의 목표 달성 여부</li>
+                    <li>획득한 별의 갯수</li>
+                    <li>등장한 기믹</li>
+                </ul>
+                <div class = "clearfix"></div>
+                <h2>목표 선정의 이유</h2>
+                <p style = "margin-left: 34px; font-size: 20px; font-family: Esamanru Light; width : 720px; line-height: 40px; height: 150px;">
+                게임이 처음 출시 되었을 때엔 스테이지 3 까지만 존재하였었기에 개발자의 초기 의도를<br>
+                분석하기 위해 스테이지 3 까지 클리어 하여 내용을 분석하고 그 의도를 파악하기<br>
+                위함과, 스테이지 3 즈음에 대부분의 
+                기믹들과 앞으로 나올 기믹들의 기본이 될 기믹들이 해금되며, 이를 분석하기 위해서 스테이지 3 까지 도달 하는 것을 목표로 함.</p>
+                
+                <h2>평가 방법</h2>
+                <ol>
+                    <li>한 스테이지에 존재하는 기믹들을 확인하고 시간을 잰다.</li>
+                    <li>그 후로, 그 스테이지를 클리어 할 때 까지 반복한다.</li>
+                    <li>클리어 할 때 까지 재시도를 한 횟수와 소요된 시간을 확인하고 기록한다. </li>
+                    <li>게임 전체 목표가 달성 될 때 까지 이를 반복한다.</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="context_4">
+            <h1>4. 게임 플레이 기록</h1>
+            <div class = "statistics">
+                <img src = "assets/images/CutTheRope/CutTheRope.png">
+                <p>총 기록 시간 : <span style = "font-family: Esamanru Light;">1321초 (22분 1초)</span><br>
+                    스테이지 당 평균 소요 시간 :  <span style = "font-family: Esamanru Light;">26.42초</span><br>
+                    스테이지 당 평균 시도 횟수 :  <span style = "font-family: Esamanru Light;">2.5회</span><br>
+                    가장 많이 시도한 스테이지와 횟수 :  <span style = "font-family: Esamanru Light;"><br>17회 / 2-14</span><br>
+                    스테이지 목표 달성률 : <span style = "font-family: Esamanru Light;">92%</span><br>
+                    가장 많이 등장한 기믹 : <span style = "font-family: Esamanru Light;">방울 / 28회</span><br>
+                    가장 적게 등장한 기믹 :<br><span style = "font-family: Esamanru Light;">시간 제한이 있는 별 / 6회</span><br><br>
+                    스테이지 1-1 부터 2-25까지<br>
+                    클리어 후의 기록
+                </p>
+            </div>
+            <div class = "clearfix"></div>
+            <div class = "record">
+                <img src = "assets/images/CutTheRope/playtime1.jpg">
+                <img src = "assets/images/CutTheRope/playtime2.jpg">
+                <img src = "assets/images/CutTheRope/playtime3.jpg">
+            </div>
+            <div class = "clearfix"></div>
+            <h2>▶ 총 플레이 타임 :&nbsp;&nbsp;&nbsp;&nbsp; 약 3시간</h2>
+        </div>
+        <div class="context_5">
+            <h1>5. 게임 분석</h1>
+            <p class = "analysis">이번에 플레이한 "Cut the Rope" 는, 스테이지로 구성되어있는 게임이며, 다양한<br>
+                오브젝트들과의 상호작용과 물리엔진들을 활용해 퍼즐을 풀어내는 것이 주가 되는<br>
+                게임이다. 이러한 게임의 특성 상 스테이지 마다 난이도가 서로 상이하며, 그렇기에<br>
+                스테이지 몇 개를 공략하며 게임을 분석하려 한다.
+            </p>
+            <div class = "explaination clearfix">
+                <img src = "assets/images/CutTheRope/Clear1.jpg">
+                <h1 style="text-align: right; float: left; width: 340px;">스테이지 1-21</h1>
+                <p>일단 스테이지를 보면 스테이지에 방울이 총 2개,<br>
+                    밧줄이 총 4개가 보인다. 밧줄 중 2개는 도넛이<br>
+                    더 이상 위로 올라가지 못하도록 잡아주고 있다.<br><br>
+                    이 스테이지의 공략은<br>
+                </p>
+                <ol>
+                    <li>왼쪽 아래에서 붙잡아주고 있는 밧줄을 끊어<br>
+                        도넛을 오른쪽 위로 보내어 첫 번째 별을<br>
+                        획득한다.
+                    </li>
+                    <li>오른쪽 아래에서 붙잡아주던 밧줄도 끊어<br>
+                        도넛이 다시 가운데로 올 수 있게 한다.</li>
+                    <li>남은 밧줄 2개도 끊어 버려 도넛이 위로<br>
+                        올라갈 수 있게 하여 2번째 별을 획득한다.</li>
+                    <li>도넛이 너무 올라가 게임이 클리어 되기 전에<br>
+                        방울을 터뜨려 도넛을 밑으로 떨어뜨린다.<br>
+                        이후 관성에 의해 도넛이 방울로 들어가면서<br>
+                        마지막 별 까지 획득하고 다시 위로 올려보내<br>
+                        게임을 클리어 한다.</li>
+                </ol>
+                <p>
+                    다음과 같이 진행된다.<br>
+                </p>
+            </div>
+            <p>
+                이 스테이지에서 미루어 보았을 때, Cut The Rope는 우리가 흔히 퍼즐이라하면 떠올리는 스도쿠, 직소퍼즐 등과는<br>
+                다르게, 관성과 물리엔진을 활용하고, 퍼즐의 공략에 있어서 "타이밍" 이라는 요소도 적지 않는 비중을 차지하는<br>
+                새로운 타입의 퍼즐 게임이라고 할 수 있을 것 같다. 하지만 앞서 말했듯, 이 게임은 스테이지마다 등장하는 요소들이<br>
+                서로 상이하며, 따라서 다른 스테이지들도 살펴보며 게임을 조금 더 분석해 보려고 한다.
+            </p>
+        </div>
+        <div class="context_6">
+            <h1>5. 게임 분석</h1>
+            <div class = "explaination clearfix">
+                <img src = "assets/images/CutTheRope/Clear2.jpg">
+                <div class="explan">
+                    <h1 style="text-align: right; float: right; width: 340px;">스테이지 2-14</h1>
+                    <p>이번에도 스테이지를 살펴보는 것부터 시작한다.<br>
+                        이 곳에서도 밧줄이 총 4개가 보이지만, 한 가지<br>
+                        특이한 점은 팽팽하게 연결된 밧줄이 3개나<br>
+                        있다는 것이다. 또 맵에 거미가 2마리 보인다.<br><br>
 
+                        이 스테이지의 공략은<br>
+                    </p>
+                    <ol>
+                        <li>왼쪽에서 잡고 있는 밧줄을 끊는다. 이때,<br>
+                            밧줄을 끊은 반동으로 오른쪽에 있는 거미와<br>
+                            연결되게 된다.
+                        </li>
+                        <li>거미를 먼저 끊어 놓고 진행해도 좋고, 아니면<br>
+                            한 번에 끊어도 좋다. 밑에 있는 밧줄에서<br>
+                            시작해서 오른쪽 위의 밧줄까지 원호를 그리며<br>
+                            자른다. 이때, 중앙에서 잡아주는 밧줄은<br>
+                            자르지 않도록 한다.
+                        </li>
+                        <li>아래쪽에서 잡아주던 밧줄을 자른 반동으로<br>
+                            도넛이 오른쪽 위로 튀어나가게된다. <br>
+                            이때, 중앙의 밧줄에 의해 원호를 그리게 되며<br>
+                            첫 번째 별과 두 번째 별을 획득 한다.<br>
+                        </li>
+                        <li>
+                            이후 왼쪽 거미와 연결되며 두 밧줄이 <br>
+                            직각을 이루게 되며, 중앙과 연결된 밧줄을 <br>
+                            끊어 왼쪽 거미가 있던 압정을 중심으로<br>
+                            진자 운동을 하게한다.
+                        </li>
+                        <li>도넛이 올라갔다 내려오는 타이밍에 맞추어<br>
+                            밧줄을 잘라 관성으로 암냠에게 날아갈 수<br>
+                            있도록 한다.
+                        </li>
+                    </ol>
+                    <p>
+                        다음과 같이 진행된다.<br>
+                    </p>
+                </div>
+                <h1 class = "conclusion">결론</h1>
+                <div class = "conclusion">
+                    Cut The Rope는 퍼즐 게임으로서 혁신적이였다고 말할 수 있다. 보통 "퍼즐 게임" 하면 직소퍼즐이나 스도쿠 같이 정적인 게임을
+                    주로 떠올리기 마련이다. 하지만, Cut The Rope는 정말 지금까지 나온 기술들을 잘 활용하여 게임에 "움직임" 을 불어넣었다.
+                    기존 퍼즐게임의 루즈하다는 단점을, 시간제한이 있는 별이나 거미 등의 요소를 활용해 게임의 템포를 끌어올렸으며, 물리엔진과
+                    관성 등으로 게임에 정말 집중하지 않으면 클리어 할 수 없는 기믹을 넣어 게임에 더더욱 집중하게 된다.
+                    이 게임이 11년 전에 출시 되었음을 생각하면, 이 게임은 정말 "퍼즐게임에서 이런 것도 가능하다" 라는 것을 여실히 보여주는 듯 하다.
+                    오래된 게임이니 만큼, 지금 보면 조금은 식상할 수 도 있는 게임이지만, 그렇기에 더더욱 대단한 게임이라고 생각한다.
+                </div>
             </div>
         </div>
     </body>

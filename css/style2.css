@@ -1,0 +1,77 @@
+* {margin: 0 auto; padding: 0 auto; font-size: 16px;}
+a {color: #333; text-decoration: none; }
+li {list-style: none;}
+.clearfix::before, .clearfix::after {clear: both; display: block; content: '';}
+
+#wrapper {width: 1000px; margin: 0 auto;}
+
+#header {}
+#header h1{float: left; padding: 15px 0 10px; }
+#header h1 img {height: 40px; width: 110px;}
+#header .nav{float: right; background: #ddd; padding: 0px;}
+#header .nav ul{padding-left: 0px; height: 80px}
+#header .nav li{float: left; position: relative; width: 140px; text-align: center;}
+#header .nav li a {display: block; font-size: 18px; font-weight: bold; padding: 20px; padding-top: 24px;}
+#header .nav li a:hover {background: #ccc;}
+#header .nav li ul.submenu {display: none; position: absolute; left: 0; top: 69px; padding: 0px;
+    z-index: 100;}
+#header .nav li ul.submenu a{padding: 10px; background-color: #888;}
+#header .nav li ul.submenu a:hover {background: #666;}
+
+#banner {margin-top: 0px; height: 389px; overflow: hidden; }
+#banner img { width: 100%; height: 389px; display: block;}
+/* #banner .slideList {position: relative; width: 1000px; height: 389px; }
+#banner .slideList .slideImg { position: relative;}
+#banner .slideList .slideImg h2 { position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.4); padding: 10px 30px;
+    border-radius: 20px;} */
+
+#banner .slideList {position: relative; width: 3000px;}
+#banner .slideList .slideImg{position: relative; width: 1000px; float: left;}
+#banner .slideList .slideImg h2 { position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.4); padding: 10px 30px;
+    border-radius: 20px;}
+
+
+#content1 {margin-top: 20px;}
+#content1 .left  {padding: 2%; float: left; width: 45%; margin-right: 2%; background-color: #f2f2f2;
+    background: #f2f2f2 url(../assets/images/CutTheRope/Dounut.jpg) no-repeat right 20px center;
+    background-size: 80px; }
+#content1 .left h2 {font-size: 24px; padding-bottom: 5px;}
+#content1 .left p {padding-bottom: 15px; font-size: 14px; color: #666;}
+#content1 .left a {background: url(../assets/images/CutTheRope/bubble.jpg) no-repeat left center;
+    background-size: 20px; padding-left: 25px;}
+#content1 .right {padding: 2%; float: left; width: 45%; margin-right: 0%; background-color: #f2f2f2;
+    background: #f2f2f2 url(../assets/images/CutTheRope/Dounut.jpg) no-repeat right 20px center;
+    background-size: 80px; }
+#content1 .right h2 {font-size: 24px; padding-bottom: 5px;}
+#content1 .right p {padding-bottom: 15px; font-size: 14px; color: #666;}
+#content1 .right a {background: url(../assets/images/CutTheRope/bubble.jpg) no-repeat left center;
+    background-size: 20px; padding-left: 25px;}
+#content .right a em{font-style: normal; font-size: 13px;}
+
+#content2 {margin-top: 20px;}
+#content2 h2 {font-size: 24px;}
+#content2 .best3 figure {float: left; width: 32%; margin-right: 2%;}
+#content2 .best3 img {width: 100%;}
+#content2 .best3 figure:last-child{margin-right: 0;}
+.tab-menu .tab-btn ul {margin-left: -40px; overflow: hidden;}
+.tab-menu .tab-btn li {float: left; margin-right: 15px;}
+.tab-menu .tab-btn li a{display: block; font-size: 24px; padding-bottom: 10px; color: #999;}
+.tab-menu .tab-btn li.active a {color: black;}
+
+#footer {padding: 20px 0px; background-color: #202020; margin-top: 30px;}
+#footer h2 {float: left; padding-left: 20px;}
+#footer h2 img {width: 150px;}
+#footer .foot {float: right;}
+#footer .foot ul {padding-bottom: 10px; margin-left: -40px;}
+#footer .foot ul li {display: inline; margin-right: 10px; }
+#footer .foot ul li a{color: white; }
+#footer .foot address {font-style: normal; color: #ccc;}
+
+.layer_bg {display: none; position:fixed; left: 0; top: 0;
+z-index: 900; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8);}
+.layer {display : none; position: absolute; left: 30px; top: 30px; z-index: 1000;
+    width: 500px; height: 500px; border: 3px solid black; background-color: #fff;}
+.layer h2 { padding: 20px; color:black;}
+.layer .close {position: absolute; bottom: 20px; right: 20px;}
