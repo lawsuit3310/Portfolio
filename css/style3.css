@@ -1,0 +1,59 @@
+* {margin: 0; padding: 0;}
+a {text-decoration: none;  color: #333;}
+li {list-style: none;}
+.clearfix::before, .clearfix::after {display: block; clear: both; content: '';}
+
+#wrap {width: 1000px; margin: 0 auto; padding-top: 5px;}
+#aside {width: 270px; float: left;}
+#contents {width: 700px; float: right;}
+#footer {width: 100%; background: #edf2f8; float: left;}
+
+#aside h1 {margin-bottom: 30px;}
+#aside h1 img { width: 150px; height: 30px;}
+#aside .nav li{padding-bottom: 5px;}
+#aside .nav li a{font-size: 23px; color: inherit; }
+#aside .nav li a:hover{text-decoration: underline;}
+#aside .nav li.active {color: blueviolet;}
+#aside .nav li ul.submenu {display: none;}
+#aside .nav li ul.submenu li {}
+#aside .nav li ul.submenu li a {font-style: 20px; color: #333; padding: 10px;
+    border-bottom: 1px solid #ccc;  display: block; box-sizing: border-box;}
+#aside .nav li ul.submenu li a:hover {text-decoration: none;}
+
+#contents .banner {height: 384px; }
+#contents .banner img{width: 100%; display: block;}
+.slideList {width: 700px; position: relative;}
+.slideList .slideImg {position: absolute; left: 0; top: 0; width: inherit;}
+.slideList .slideImg h2{position: absolute; left: 50%; top: 50%; 
+    transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.5); padding: 10px 30px;
+    border-radius: 25px; color: white;}
+
+#contents .tab{padding: 40px 0; height: 200px; position: relative;}
+#contents .tab img{width: 100px;}
+#contents .tab ul {text-align: center; }
+#contents .tab ul li{display: inline; padding: 5px;}
+#contents .tab ul li a{font-size: 24px; color: #999;}
+#contents .tab ul li ul{position: absolute; left: 0; top: 100px; width: 100%; overflow: hidden;}
+#contents .tab ul li ul li{width : 19%; float: left;  box-sizing: border-box;}
+#contents .tab ul li ul li a{font-size: 14px;}
+#contents .tab ul li ul li a span{display: block;}
+#contents .tab ul li.active a {color: black;}
+
+#contents .layer {background: #f7f7f7; padding: 15px;}
+#contents .layer > div {float: left; width: 32%; padding: 6% 3%;
+    border: 2px solid #ccc;  box-sizing: border-box; text-align: center; margin-right: 2%; background: white;  position: relative;}
+#contents .layer > div:last-child { margin-right: 0;}
+#contents .layer > div img {width: 100px; padding: 20px 0;}
+#contents .layer > div ul li {text-align: left; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; padding-bottom: 5px;}
+#contents .layer > div .more {position: absolute; top: 20px; right: 20px; border: 1px solid #ccc;
+    border-radius: 50%; width: 15px; height: 15px; line-height: 13px;}
+
+#footer {margin-top: 20px; box-sizing: border-box;}
+#footer h2 {float:left}
+#footer h2 img {width: 80px;}
+#footer address {float: left; font-size: normal; padding-top: 20px; padding-left: 20px;}
+#footer .sns {float: right;}
+#footer .sns ul{overflow: hidden; margin-top: 20px;}
+#footer .sns li{float: left;}
+#footer .sns li img{width: 60px;}
+

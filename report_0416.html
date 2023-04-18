@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[3회 보고서] 202336961_민기홍</title>
+    <style>
+            @font-face {
+                font-family: "Esamanru Bold";
+                src: url(assets/fonts/esamanru_TTF/esamanru\ Bold.ttf);
+            }
+            @font-face {
+                font-family: "Esamanru Medium";
+                src: url(assets/fonts/esamanru_TTF/esamanru\ Medium.ttf);
+            }
+            @font-face {
+                font-family: "Esamanru Light";
+                src: url(assets/fonts/esamanru_TTF/esamanru\ Light.ttf);
+            }
+            * {margin: 0; padding: 0;}
+            :root{
+                --A4Height : 1250px;
+            }
+            h1{
+                font-family: "Esamanru Bold";
+                font-size: 40px;
+            }
+            h2{
+                font-size: 30px;
+                margin-bottom: 20px;
+            }        
+            tr, td, th {
+                border : 1px solid black;
+                padding : 20px;
+            }
+            
+            * {width: inherit ; margin : 0 auto; font-family: "Esamanru Medium";}
+
+            .clearfix::before, .clearfix::after { display: block; clear: both; content: '';}
+
+            /* page 1 */
+            .context_1 { width: 800px; height: var(--A4Height); margin-bottom: 1px; background-color: white; box-sizing: border-box;}
+            .context_1 h1 {margin-left: 20px; padding: 20px 0;}
+            .header { width: 100%; height: 100px; background-color: brown; padding-top: 25px; box-sizing: border-box;}
+            .header > h1 {display: block; text-align: center; height: auto; margin-left: 0px; padding: 0px;}
+            .introduction {width: 100%; height: 550px; background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.8)),  url(assets/images/Asphalt/A9_MetaImage.jpg);
+                background-position: top; background-repeat: no-repeat; background-size: auto 100%; padding-top: 10px; box-sizing: border-box; }
+            .introduction> table { margin : 20px; font-size: 20px; margin-top: 10px; width: 760px; border : 1px solid black; border-collapse: collapse; }
+            .head { width: 100px; font-weight: bold; font-size: 18px; text-align: center; }
+            .distinction > td, .reason > td{ line-height: 30px;}
+            .reason{ width: inherit; height: 100px;}
+            .indicators{height: 500px; margin-top: 20px;}
+            .indicators h1 {margin-bottom: 20px;}
+            .indicators h2 {margin-left: -20px; font-weight: lighter;}
+            .indicators > ul > li, .indicators > ol > li {line-height: 40px; font-family: "Esamanru Light"; margin-left: 60px; font-size: 20px; margin-bottom: 20px;}
+            .elementList { width: 760px;}
+            .elementList > li { float: left; width: 300px; }
+
+            /* page 2 */
+            .context_2 {width: 800px; height: var(--A4Height); margin-bottom: 1px; box-sizing: border-box; padding: 20px;}
+            .context_2 h2 {font-weight: lighter;}
+            .context_2 h1 {margin-bottom: 50px;}
+            .indicators:nth-child(1){height: auto; display: block;}
+            .indicators:nth-child(1) > p {font-size: 20px; width: 740px; line-height: 40px; margin-bottom: 50px; font-family: "Esamanru Light"; margin-left: 60px;}
+            .indicators:nth-child(1) h2 {margin-left: 20px; margin-top: 20px;}
+            .analyze {width: 100%;}
+            .analyze p {line-height: 30px; font-size: 20px;}
+
+            /* page 3 */
+            .context_3 {width: 800px; height: var(--A4Height); margin-bottom: 1px; box-sizing: border-box; padding: 20px;}
+            .context_3 h1 {margin: 20px 0;}
+            .context_3 h2 {font-weight: lighter; margin-left: 20px; margin-top: 30px;}
+            .context_3 table {border-collapse: collapse; width: 700px;}
+            .context_3 table img {width: 400px; height: 100%;}
+            .context_3 tr {margin-bottom: 60px; padding: 0;}
+            .context_3 th {width: 400px;}
+            .context_3 td, th, tr {border: 0px; vertical-align: top; line-height: 25px; font-family: Esamanru Light;}
+            .context_3 b {font-size: 40px; line-height: 50px; font-family: Esamanru Light;}
+
+            /* page 4 */
+            .context_4 {width: 800px; height: var(--A4Height); margin-bottom: 1px; box-sizing: border-box; padding: 20px;}
+            .context_4 h1 {margin: 20px 0;}
+            .context_4 h2 {font-weight: lighter; margin-left: 20px; margin-top: 30px;}
+            .racetype {width: 100%;}
+            .racetype li { width: 700px; margin-left: 60px; font-size: 20px; line-height: 30px; font-family: Esamanru Light; margin-bottom: 20px;}
+            .racetype span {font-weight: normal; line-height: 30px; font-size: 25px;}
+            .record b {width: 100%; display: block; text-align: center; margin-top: 20px; margin-left: -20px; font-size: 40px;}
+            .record img {width : 760px;}
+            .playtime {width: 100%; box-sizing: border-box; padding: 20px;}
+            .playtime img {float: left; width: 350px; height: 400px;}
+            .playtime img:nth-child(1) {float: right; margin-right: 40px;}
+
+            /* page 5 */
+            .context_5 {width: 800px; height: var(--A4Height); margin-bottom: 1px; box-sizing: border-box; padding: 20px; }
+            .context_5 h1 {margin: 20px 0;}
+            .context_5 h2 {font-weight: lighter; margin-left: 20px; margin-top: 30px;}
+            .context_5 img {width: 700px; margin-left: 30px;}
+            .context_5 b {width: 100%; display: block; text-align: center; margin-top: 20px; margin-left: -20px; font-size: 30px;}
+            .objects {width: 740px;}
+            .objects tr {width: 100%;}
+            .objects td,th {border: none;}
+            .objects th {width: 300px;}
+            .objects tr:nth-child(2) {height: 150px;}
+            .objects span {font-size: 25px;}
+            .objects img {float: left; width: 150px;}
+            .objects p {margin-left: 20px; margin-top: 10px;}
+
+            /* page 6 */
+            .context_6 {width: 800px; height: var(--A4Height); margin-bottom: 1px; box-sizing: border-box; padding: 20px;}
+            .context_6 h1 {margin: 20px 0;}
+            .context_6 h2 {font-weight: lighter; margin-left: 20px; margin-top: 30px; display: block;}
+            .knockdown{width: 760px; margin-left: 20px;}
+            .knockdownimg {width: 400px; float: left;}
+            .knockdown h2 {font-size: 18px; margin-top: 10px; margin-left: 0px;}
+            .knockdown h2:nth-child(4) {font-size: 18px; margin-top: 10px; margin-left: 0px; width: 500px;}
+            .knockdownexplain {float: right; width: 350px; box-sizing: border-box; padding: 20px; height: 500px; padding-top: 0; line-height: 30px; font-weight: lighter; font-size: 20px;}
+            .nitro {width: 760px; margin-top: -40px;}
+            .nitroimg {width: 400px; float: left; margin-left: 20px;}
+            .nitro h2:nth-child(2n) {font-size: 18px; margin-top: 10px; margin-left: 20px; float: left;}
+            .nitroexplain { float: right; width: 340px; box-sizing: border-box; padding: 20px; padding-top: 0; line-height: 30px; font-size: 20px;}
+
+            /* page 7 */
+            .context_7 {width: 800px; height: var(--A4Height); margin-bottom: 1px; box-sizing: border-box; padding: 20px;}
+            .context_7 h1 {margin: 20px 0;}
+            .context_7 h2 {font-weight: lighter; margin-left: 20px; margin-top: 30px; display: block;}
+            .context_7 img {width: 100%; margin-top: 50px;}
+            .conclution {font-size: 20px; line-height: 30px; margin-top: 40px; margin-left: 20px; width: 720px;}
+
+        </style>
+</head>
+<body>
+    <div class="context_1 clearfix">
+        <header class="header">
+            <h1>도로 포장재 게임 a.k.a 아스팔트 9</h1>
+        </header>
+        <div class="introduction">
+            <h1>1. 게임 소개</h1>
+            <table>
+                <tr>
+                    <td class = "head">게임 제목</td>
+                    <td> 아스팔트 9: 레전드</td>
+                </tr>
+                <tr class = "distinction">
+                    <td class = "head">게임 특징</td>
+                    <td>
+                        - 수많은 자동차들과 그 자동차들을 위한 다양한 레이싱 트랙<br>
+                        - 실제로 존재하는 자동차들에서 가져온 모델링으로 더욱 현실감 있는<br>
+                        플레이가 가능<br>
+                        - 직접 커스터마이징 가능한 차량들<br>
+                    </td>
+                </tr>
+                <tr class = "reason">
+                    <td class = "head">선정 이유</td>
+                    <td>
+                        - PC와 모바일을 모두 지원하는 크로스 플랫폼 게임 <br>
+                        - 쉽고 단순한 조작 방식을 가지고 있음 </br>
+                        - 다양한 자동차 스턴트 액션이 있음<br>
+                        - "니트로" 시스템을 통한 속도감 있는 게임 플레이<br>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="indicators">
+            <h1>2. 게임 플레이 기준</h1>
+            <ul style="list-style: none;">
+                <li><h2>게임의 목표</h2>
+                    <ul style = "list-style: '- ';">
+                        <li>"커리어 시즌" (캠페인) 챕터 1 클리어</li>
+                        <li>차량 5대 이상 획득</li>
+                    </ul></li>
+                <li>
+                    <h2>플레이 중 기록 요소</h2>
+                    <ul class = "elementList">
+                        <li>플레이 타임 (주행 시간)</li>
+                        <li>스테이지 </li>
+                        <li>사용한 차종</li>
+                        <li>각 액션(스턴트)별 사용한 횟수</li>
+                        <li>경쟁자의 수</li>
+                        <li>경찰차의 등장여부</li>
+                        <li>레이스 후 순위</li>
+                        <li>사용한 차량의 등급</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="context_2 clearfix">
+        <div class="indicators">
+            <h1>2. 게임 플레이 기준</h1>
+            <h2>분석할 요소</h2>
+            <p>- 자동차 스턴트 액션의 종류, 주행 중 등장하는 게임 내 오브젝트와의 상호작용에 관해<br>
+                중점적으로 분석</p>
+                <h2>목표 선정의 이유</h2>
+                <p>챕터 1을 클리어함으로써 해금되는 몇몇 자동차들을 얻기 위함 및, 게임을 충분히<br>
+                    분석하기 위해 한 챕터를 모두 클리어 하는 것을 목표로 삼음</p>
+                <h2>기록 방법</h2>
+                <p>- 1회 주행 후 게임 내 리플레이 재생 기능을 통해 주행 영상을 보면서 분석<br>
+                - "리그" 한 개를 처음부터 끝까지 플레이하며 게임을 분석함.</p>
+        </div>
+        <div class="analyze clearfix">
+            <h1>3. 게임 플레이 기록 및 분석</h1>
+            <h2>아스팔트 9의 스테이지 구성</h2>
+            <img src="assets/images/Asphalt/AsphaltStage.png" style="width: 400px; margin-top: 20px; float: left; ">
+            <p style = "width: 320px; float: right; margin-top: 60px;">각각의 스테이지를 "리그" 라는 단위로 묶어서 구분하며, 각각의 리그는 "챕터" 로 관리되고 있음</p>
+        </div>
+    </div>
+    <div class="context_3 clearfix">
+        <div class="analyze"></div>
+            <h1>3. 게임 플레이 기록 및 분석</h1>
+            <h2>스턴트 액션의 종류</h2>
+            <table>
+                <tr>
+                    <th><img src="assets/images/Asphalt/AsphaltDrift.jpg"></th>
+                    <td><b>드리프트</b><br>
+                        흔히 "드리프트" 하면 떠올리는
+                        그 액션으로, 급격한 커브의 트랙
+                        에서 속도감을 잃지 않으며
+                        주행하기 위한 기술이며, 사용 시
+                        속도는 다소 줄어들지만,<br>
+                        "니트로 게이지" 가 채워짐
+                    </td>
+                </tr>
+                <tr>
+                    <th><img src="assets/images/Asphalt/Asphalt360.jpg"></th>
+                    <td><b>360<br></b>
+                        드리프트 버튼을 연타하는 것으로<br>
+                        사용 가능한 액션이며, 사용 시 yaw 방향으로 360도 회전하며 "니트로 게이지" 를 채우고, 주위에 차가 있을 경우 파괴하며,
+                        공중을 활강하기 직전에 사용할 경우 활강하면서 회전함
+                    </td>
+                </tr>
+                <tr>
+                    <th><img src="assets/images/Asphalt/AsphaltRoll.jpg"></th>
+                    <td><b>배럴 롤<br></b>
+                        게임 내에 존재하는 "기울어진 점프대"를 통해 점프할 경우 볼 수 있으며, 
+                        사용 시 roll 방향으로 회전하며 활강함<br>
+                        또한 회전하는 횟수는 시전시 차량 속도에 따라 달라지며, "니트로 게이지" 를 채워줌
+                    </td>
+                </tr>
+                <tr>
+                    <th><img src="assets/images/Asphalt/AsphaltNitro.jpg"></th>
+                    <td><b>니트로<br></b>
+                        "니트로 게이지" 를 채움에 따라 사용이 가능하며 니트로 게이지의 양에 따라
+                        니트로 / 퍼펙트 니트로 / 니트로 쇼크 웨이브 의 3가지로 나뉘며 사용 시 이펙트가 달라짐 
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="context_4">
+        <div class = "racetype">
+            <h1>3. 게임 플레이 기록 및 분석</h1>
+            <h2>게임의 진행 방식</h2>
+            <ol>
+                <li><span>일반 주행</span><br>
+                    일반 주행 모드는 일반적인 레이싱 모드로, 3 / 5 / 7 대의 경쟁 차량과 함께 레이스를 펼치는 모드임
+                </li>
+                <li><span>타임 어택</span><br>
+                    타임 어택 모드는 제한된 시간 안에 트랙을 완주해야하는 모드로, 트랙에 존재하는<br>
+                    "시계" 오브젝트를 획득하면 제한 시간이 늘어남
+                </li>
+                <li><span>탈출 모드</span><br>
+                    탈출 모드는 타임 어택 모드를 변형한 모드로 기본적인 틀은 타임 어택 모드와 같으나
+                    "경찰차" 가 다수 등장해 주행을 방해하며 그 방해를 뚫고 트랙을 완주해야함
+                </li>
+            </ol>
+        </div>
+        <div class="record clearfix"> 
+            <h2>플레이 타임 및 기록</h2>
+            <div class="playtime clearfix">
+                <img src = "assets/images/Asphalt/AsphaltPlaytime1.jpg" >
+                <img src = "assets/images/Asphalt/AsphaltPlaytime2.jpg" >
+            </div>
+            <b>약 10시간 플레이</b>
+        </div>
+    </div>
+    <div class="context_5">
+        <h1>3. 게임 플레이 기록 및 분석</h1>
+        <h2>플레이 타임 및 기록</h2>
+        <img src = "assets/images/Asphalt/AsphaltSheet.png" >
+        <h2>게임 내의 오브젝트들</h2>
+        <table class="objects">
+            <tr>
+                <th>
+                    <img style = "height: 150px;" src="assets/images/Asphalt/AsphaltNitroObj.jpg" alt="#">
+                </th>
+                <td><span>니트로</span><br>
+                    <p>
+                        획득할 경우 니트로 게이지를 채워줌<br>
+                        파란색 니트로와 노란색 니트로 2가지가 존재하며, <br>
+                        노란색 니트로는 파란색에 비해 게이지를 2배로 채워줌
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <img style="height: 100px;" src="assets/images/Asphalt/AsphaltJump2.jpg" alt="#">
+                </th>
+                <td><span>점프대</span><br>
+                    <p>
+                        자동차가 이 오브젝트 위를 지나갈 경우<br>
+                        위로 튀어나가며 "활강" 하게 된다. <br>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <img src="assets/images/Asphalt/AsphaltJump1.jpg" alt="#">
+                </th>
+                <td><span>기울어진 점프대</span><br>
+                    <p>
+                        일반적인 점프대와 다르게 살짝 기울어져 있으며<br>
+                        자동차가 이 위를 지나가면 <br>
+                        일반적인 활강이 아닌, "배럴 롤" 을 하게된다.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <img style="height: 150px;" src="assets/images/Asphalt/AsphaltTime.jpg" alt="#">
+                </th>
+                <td><span>시계</span><br>
+                    <p>
+                        타임 어택 모드에만 존재하며, 획득하게 되면 <br>
+                        제한 시간이 늘어나게 되어 더 오래 주행 할 수 있게 된다.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="context_6 clearfix">
+        <h1>3. 게임 플레이 기록 및 분석</h1>
+        <h2>액션 분석 - 차량 파괴 ( 녹다운 )</h2>
+        <div class = "knockdown clearfix">
+            <div class="knockdownimg">
+                <img src="assets/images/Asphalt/AsphaltKnockDown1.jpg" alt="">
+                <h2>▲ 360을 사용하여 경쟁차량을 파괴하는 모습</h2>
+                <img src="assets/images/Asphalt/AsphaltKnockDown2.jpg" alt="">
+                <h2>▲ 니트로 쇼크 웨이브를 사용하여 경쟁차량을 파괴하는 모습</h2>
+            </div>
+            <p class="knockdownexplain">
+                아스팔트 9에는 니트로 쇼크 웨이브, <br>
+                혹은 360을 사용하는 도중에 <br>
+                경쟁차량과 부딪힐 경우, 부딪힌 <br>
+                경쟁차량을 파괴하는 시스템이 <br>
+                존재한다.
+                <br>
+                차량을 파괴 할때, 파괴 되는<br>
+                차량에 카메라가 맞춰지며<br>
+                잠시 슬로우 모션을 거는데, <br>
+                이를 통해 단지 속도감 뿐만 아니라,<br>
+                다른 차량들을 파괴하는 쾌감까지도<br>
+                더하며 보다 게임을 다채롭게<br>
+                만들어준다.
+            </p>
+        </div>
+        <div class="nitro">   
+            <h2>액션 분석 - 니트로</h2>
+            <div class="nitroimg">
+                <img src="assets/images/Asphalt/AsphaltNitro.jpg" alt="">
+                <h2>▲ 니트로 쇼크 웨이브를 통한 니트로 사용 모습</h2>
+                <img src="assets/images/Asphalt/AsphaltPerfectNitro.jpg" alt="">
+                <h2>▲ 퍼펙트 니트로를 통한 니트로 사용 모습</h2>
+            </div>
+            <p class="nitroexplain">
+                아스팔트 9 의 니트로 시스템은 <br>
+                다른 레이싱 게임들에도 흔히 <br>
+                존재하는 니트로 시스템이다. <br>
+                아스팔트 9 만의 차별점이라고 하면<br>
+                일반적으로 잠깐 부스팅하고 끝나는<br>
+                다른 니트로 시스템들과는 다르게<br>
+                니트로 게이지가 채워진 양과 <br>
+                터치하는 타이밍에 따라 니트로를 <br>
+                니트로 / 퍼펙트 니트로 / <br>
+                니트로 쇼크 웨이브의 3단계로<br>
+                나눠서 사용할 수 있다. <br>
+                니트로를 사용하게 되면 약간의<br>
+                줌 인 효과와 함께 테두리에 <br>
+                모션블러 효과가 생기며 <br>
+                게임에 속도감을 더해준다.
+            </p>
+        </div>
+    </div>
+    <div class="context_7 clearfix">
+        <h1>4. 총평 및 결론</h1>
+        <div class="conclution">
+            &nbsp;아스팔트 시리즈는 2004년부터 시작된, 휴대폰의 역사보다 오래된 게임 시리즈이다. <br>
+            역사가 오래된 레이싱 게임 시리즈인 만큼, 이래저래 노하우를 쌓아왔을 것이며, <br>
+            이번 보고서의 주제로 삼은 <b>아스팔트 9 : 레전드</b>는 2018년에 출시된,<br>
+            비교적 가장 최근에 출시되어 그 노하우가 농축된 그런 게임이라고 해도 무방하다고<br>
+            생각한다. <br>
+            &nbsp; 그 정도로 아스팔트 9는 레이싱 게임으로서의 빠른 속도감과 다양한 스턴트 액션을<br>
+            통한 액션의 쾌감을 통한 게임 플레이에 상당한 공을 들였다. <br>
+            &nbsp; 다양한 스턴트 액션들과 그 액션들을 받쳐 줄 역동감 있는 연출, 100 종류가 넘어가는 <br>
+            수많은 종류의 차량들로 플레이하는 사람의 눈을 즐겁해준다. <br>
+            &nbsp; 하지만, 이는 게임 플레이에 집중하여 평가한 부분이고, 게임 전체적으로 따지자면<br>
+            게임의 BM이 유저들이 자동차를 해금하고, 자동차를 강화하는 부분에 맞추어져 있어, <br>
+            새로운 자동차를 해금하는 것이 매우 어렵고, 시간을 많이 투자해야 한다는 것이다. <br>
+            &nbsp; 이러한 부분은 스피디하게 즐길 수 있어 한 게임이 빨리빨리 끝나게 되는 게임 플레이와 <br>
+            역효과를 내게 되었다. 한 스테이지를 클리어하는데에 걸리는 시간은 짧은데, 자동차를<br>
+            얻기 위해서는 시간을 많이 투자해야 하므로, 결국엔 같은 게임 플레이를 반복하게 된다.<br>
+            &nbsp; 결국 이로 인해, 무과금 유저들은 그저 반복되는 단순한 게임성에 질려 떠나가게 되고,<br>
+            소수의 과금을 하는 유저하게 되는 그런 구조의 게임인것이다.  <br>
+            그럼에도 게임 자체가 재미있고, 잘 만들어져있기에 5년전에 출시된 게임이면서도<br>
+            아직까지 살아남아 운영되고 있다고 생각한다.
+        </div>
+
+        <img src="assets/images/Asphalt/A9_MetaImage.jpg" alt="">
+    </div>
+</body>
+</html>
