@@ -52,12 +52,52 @@
         .page3 > p{width: 10cm; height: 12cm; margin-top: 1cm; margin-right: 0.5cm; float: right;
             font-size: 150%; padding: 0.5cm; line-height: 1cm;}
         
-        .page4 > .header {margin-bottom: 1cm;}
-        .target {width: 15cm; box-sizing: border-box; padding: 1cm; font-size: 130%; float: left;}
+        .page4 > .header {margin-bottom: -0.5cm;}
+        .target {width: 15cm; box-sizing: border-box; padding: 1cm; font-size: 130%; float: left; height: 11cm;}
         .target li {margin-bottom: 1cm;}
         .target p {width: 12cm; margin-left: 0.8cm; line-height: 1cm;}
-        .recordElement {float: right; width: 13cm; height: 10cm; margin-top: 1cm; margin-right: 1cm; font-size: 130%;}
+        .recordElement {float: right; width: 13cm; height: 10cm; margin-top: 1cm; margin-right: 1cm; font-size: 130%; height: 10cm;}
         .recordElement li {line-height: 1.2cm;}
+        .recordMethod {width: 25cm; height: 5cm; display: inline-block; box-sizing: border-box; margin-left: 1cm; font-size: 130%;}
+        .recordMethod p {margin-left: 1cm;}
+        
+        .record{width: inherit; margin-top: 0.2cm;}
+        .ending {margin-top: 0.5cm; width: 18cm; float: left;}
+        .ending img {width: 11cm; float: left;}
+        .endingDescription {float: right; width: 6.5cm; font-size: 120%;}
+        .endingDescription h2 {text-align: center; width: inherit;}
+        .endingDescription p {line-height: 0.8cm;}
+        .status {width: 11cm; float: right; margin-top: 0.5cm; caption-side: bottom;}
+        .page5 > figcaption {width: 11cm; float: right; height: 1cm; text-align: center; margin-top: 0.1cm;}
+
+        .playtime { height: 10cm; width: 11cm; float: left; margin-top: 2cm;}
+        .playtime img {width: inherit;}
+        .playtime figcaption h2 {text-align: center;}
+        .endings {width: 18cm; height: 12cm; float: right; text-align: right; box-sizing: border-box; padding-left: -1cm;}
+        .endings img {width: 8cm; margin-left: 0.5cm;}
+        .endings figcaption{text-align: center; width: inherit; margin-top: 0.2cm; font-size: 120%;}
+
+        .statusDescription {width: inherit;}
+        .statusDescriptionImg {width: 11cm; height: 15cm; float: left;}
+        .statusDescriptionImg img {width: inherit; margin-bottom: 0.2ccm;}
+        .statusDecriptionText{float: right; width: 18cm; font-size: 120%; line-height: 1.1cm; box-sizing: border-box; }
+
+        .education {width: inherit;}
+        .educationImg {width: 10cm; height: 15cm; float: left;}
+        .educationImg img {width: inherit; margin-bottom: 0.2ccm;}
+        .educationText{float: right; width: 18cm; font-size: 120%; line-height: 1.1cm; box-sizing: border-box; }
+        
+        .stressText {width: 16cm; font-size: 120%; line-height: 0.95cm; float: left;}
+        .stressImg {width: 10cm; height: 15cm; float: right; margin-right: 1cm;}
+        .stressImg img {width: inherit; margin-bottom: 0.2ccm;}
+
+        .arbeit {width: inherit;}
+        .arbeitImg {width: 10cm; height: 15cm; float: left;}
+        .arbeitImg img {width: inherit; margin-bottom: 0.2ccm;}
+        .arbeitText{float: right; width: 19cm; font-size: 120%; line-height: 1.05cm; box-sizing: border-box;}
+
+        .page11 img {width: 10cm; float: right; margin-right: 1cm; margin-top: 0.6cm;}
+        .page11 p { width: 17cm; float: left; margin-top: 0.6cm; font-size: 120%; margin-left: 0.5cm; line-height: 0.95cm;}
         
     </style>
 </head>
@@ -89,7 +129,7 @@
                 </tr>
                 <tr>
                     <th>출시일</th>
-                    <td>1993년 6월 15일</td>
+                    <td>1993년 6월 15일 <sub>(Refine 2004년)</sub></td>
                 </tr>
                 <tr>
                     <th>가격</th>
@@ -146,32 +186,157 @@
                 <li>연도별로 소요된 시간</li>
             </ul>
         </div>
+        <div class="recordMethod">
+            <h2>기록 방법</h2>
+            <p>'딸' 의 생일을 기준점으로 삼아 딸이 나이를 먹을 때마다 상기한 요소들을 기록</p>
+
+        </div>
         <div class="footer"></div>
     </div>
     
     <div class="context page5 clearfix">
         <div class="header"><h1>게임 플레이 기록</h1></div>
+        <img class="record" src="assets/images/PrincessMaker/PrincessMakerRecord.png" alt="">
+        <div class="ending clearfix">
+            <img src="assets/images/PrincessMaker/PrincessMakerYuushaEnding.png" alt="">
+            <div class="endingDescription">
+                <h2>&lt; 용사 엔딩 &gt;</h2>
+                <p>용사였던 아버지(플레이어)를<br> 따라 용사가 되어 모험을 떠나게 된다는 내용의 엔딩</p>
+            </div>
+        </div>
+        <img class="status"src="assets/images/PrincessMaker/PrincessMakerStatus.png" alt="" >
+        <figcaption>▲ 클리어 당시의 스테이터스</figcaption>
         <div class="footer"></div>
     </div>
     
     <div class="context page6 clearfix">
         <div class="header"><h1>게임 플레이 기록</h1></div>
+        <div class="playtime">
+            <img src="assets/images/PrincessMaker/PrincessMakerPlayTime.png" alt="">
+            <figcaption><h2>플레이 타임 : 31.5시간</h2></figcaption>
+        </div>
+        <div class="endings">
+            <img src="assets/images/PrincessMaker/PrincessMakerKishiEnding.png" alt="">
+            <img src="assets/images/PrincessMaker/PrincessMakerDancerEnding.png" alt="">
+            <img src="assets/images/PrincessMaker/PrincessMakerWritterEnding.png" alt="">
+            <img src="assets/images/PrincessMaker/PrincessMakerYuushaEnding.png" alt="">
+            <figcaption>게임을 플레이하면서 확인한 엔딩들</figcaption>
+        </div>
         <div class="footer"></div>
     </div>
     <div class="context page7 clearfix">
         <div class="header"><h1>게임 시스템의 분석</h1></div>
+        <div class="statusDescription clearfix">
+            <div class="statusDescriptionImg">
+                <img src="assets/images/PrincessMaker/PrincessMakerStatus.png" alt="">
+                <img src="assets/images/PrincessMaker/PrincessMakerHiddenStatus.png" alt="">
+            </div>
+            <div class="statusDecriptionText">
+                <h2>&lt; 딸의 능력치 &gt;</h2>
+                <p>
+                    프린세스 메이커 2에는 정말 수 많은 종류의 능력치가 존재하며,<br>
+                    이 능력치들은 크게 <b>5종류로</b> 나눌 수 있는데<br>
+
+                    - 키, 몸무게 등의 게임을 플레이 하는데에 있어 아무런 영향을 끼치지 않는 스탯<br>
+                    
+                    - 매력, 감수성 등의 게임 플레이에 영향을 주지만, 엔딩에는 영향을 주지 않는 스탯<br>
+                    
+                    - 예의범절, 예술 등의 게임 플레이에 영향을 주면서, 엔딩에도 영향을 끼치는 스탯<br>
+                    
+                    - 가사 평가, 마법 평가 등의 엔딩에 직접적으로 영향을 주는 스탯 (이하 평가치)<br>
+                    
+                    - 모성, 아버지와의 관계 등, 인게임에서는 확인 할 수 없고 엔딩 후에 확인 가능한<br>
+                      숨겨진 스탯으로 나뉜다. <br>
+                </p>
+            </div>
+        </div>
         <div class="footer"></div>
     </div>
     <div class="context page8 clearfix">
         <div class="header"><h1>게임 시스템의 분석</h1></div>
+        <div class="education">
+            <div class="educationImg">
+                <img src="assets/images/PrincessMaker/PrincessMakerEducation.png" alt="">
+                <img src="assets/images/PrincessMaker/PrincessMakerEducation2.png" alt="">
+            </div>
+            <div class="educationText">
+                <h2>&lt; 딸의 단련 / 교육 &gt;</h2>
+                딸에게 아르바이트를 시켜 게임 내 재화를 벌어오게 하는 목적이자,<br>
+                원하는 엔딩을 보기 위해서 게임을 진행하는 동안 계속해서 하게 되는 <br>
+                게임의 주 콘텐츠 중 하나이다.<br>
+                교육을 통해 단순히 능력치를 올리기만 하는 것이 아니라,<br>
+                어떤 교육을 시키느냐에 따라 어떤 능력치는 올라가고 어떤 능력치는 내려가는 식으로<br>
+                만들어져 있어 돈을 벌고 능력치를 올려 엔딩을 보는 어떻게 보면 루즈할수도 있는<br>
+                게임의 진행 방식에 긴장감을 불어넣고, 플레이어로 하여금 계속해서<br>
+                고민하게 만드는 요소 중 하나이다.
+            </div>
+        </div>
         <div class="footer"></div>
     </div>
     <div class="context page9 clearfix">
-        <div class="header"><h1>벤치마킹</h1></div>
+        <div class="header"><h1>게임 시스템의 분석</h1></div>
+        <div class="stressText">
+            <h2>&lt; 스트레스 스탯에 대해 &gt;</h2>
+            게임 내 재화를 통해 계속해서 교육만을 반복하는 것을 막았다고는 하지만,<br>
+            결국 게임은 아르바이트 -&gt; 교육 -&gt; 아르바이트 사이클의 반복이 될 것이며,<br>
+            그렇게 된다면 게임이 짐짓 루즈해질 수 있기에 그를 막기 위해 추가된 시스템이라고 생각한다. <br>
+            스트레스 스탯은 일종의 피로도와 같은 개념이다. 어떠한 사람이라도 <br>
+            쉬지 않고 연속해서 일하다보면 지치기 마련, 그렇기에 <b>딸</b> 또한, 계속해서<br>
+            아르바이트와 교육만을 반복하다보면 <b>스트레스 스탯</b>이 쌓이게 되는 것이다.<br>
+            스트레스 스탯은 매달 말에 확인이 되어, 체력 혹은 도덕성 스탯과 비교하여<br>
+            이 둘에 비해 스트레스 스탯이 지나치게 높으면, 딸에게 병이 생기거나,<br>
+            딸이 삐딱해져서 스케쥴을 제대로 진행하지 않게 된다. <br>
+            이러한 방식으로 단순한 반복성 플레이를 막고, 스케쥴을 짜는데에 있어<br>
+            더욱 많은 것들을 고려하게 만든다.
+        </div>
+        <div class="stressImg">
+            <img src="assets/images/PrincessMaker/PrincessMakerBadDaughter.png" alt="">
+            <img src="assets/images/PrincessMaker/PrincessMakerItaiDaughter.png" alt="">
+        </div>
         <div class="footer"></div>
     </div>
     <div class="context page10 clearfix">
-        <div class="header"><h1>게임 시스템의 분석</h1></div>
+        <div class="header"><h1>벤치마킹</h1></div>
+        <div class="arbeit">
+            <div class="arbeitImg">
+                <img src="assets/images/PrincessMaker/PrincessMakerArbeit.png" alt="">
+                <img src="assets/images/PrincessMaker/PrincessMakerArbeit2.png" alt="">
+            </div>
+            <div class="arbeitText">
+                <h2>&lt; 아르바이트 시스템 &gt;</h2>
+                게임 내의 재화를 벌어오게 하기 위해 꼭 필요한 시스템이다.<br>
+                아르바이트 또한 교육과 마찬가지로 단순히 재화를 벌어오기만 하는 시스템은 아닌데,
+                아르바이트를 통해서도 능력치가 변화하기 때문이다. <br>
+                가령 농장에서 아르바이트를 하게 하면, 체력과 근력이 오르지만, 기품이 떨어지는 <br>
+                식으로 말이다.
+                또한 <b>보모</b> 아르바이트와 같이 숨겨진 스탯에 영향을 주는 경우도 있어,<br>
+                플레이어가 원하는 엔딩을 보기 위해서는 어떤 아르바이트는 진행하고,<br>
+                어떤 아르바이트는 하지 않는 식으로 선택과 집중을 하게 만든다. <br>
+
+                그렇기에 프린세스 메이커에서 벤치마킹하고 싶은 요소로서 
+                아르바이트를 선택하게 되었다.<br>
+                아르바이트 시스템은 게임 진행에 있어 꼭 필요한 요소이며, 엔딩까지 계속하게 되지만,<br>
+                그것이 꼭 원하거나 좋은 결과로 이어지지 않는다는 점에서 이러한 요소가<br>
+                게임의 난이도를 높혀주고, 생각할 요소들을 더해주어 게임을 더욱 다채롭게 만든다고<br>
+                생각하기 때문이다.
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+    <div class="context page11 clearfix">
+        <div class="header"><h1>총평</h1></div>
+        <p>프린세스 메이커 시리즈의 제작사인 가이낙스는 중국의 Hoyoverse 처럼<br>
+            소위 오타쿠라고 불리는 사람들이 모여서 세운 회사이다. <br>
+            그동안 가이낙스라고 하면, 애니메이션 신세기 에반게리온, 천원돌파 그렌라간 등<br>
+            명작이라고 불리우는 애니메이션들을 많이 만들어 내었던 회사로 알고 있었기에<br>
+            처음 프린세스 메이커에 대한 조사를 하면서 <span style="font-style: italic;">"개발사가 가이낙스라고? 내가 아는 그 가이낙스 인가?"</span> 하고 놀랐었던 기억이 있다. <br>
+            아무튼 프린세스 메이커의 이야기로 돌아와, 프린세스 메이커 시리즈는 정말 많은 공을 들인, "고전게임" 이라는 주제에 걸맞는 게임이라고 생각한다. <br>
+            너무나도 재미있게 플레이를 했고, 처음 플레이 했던 날에는 시간 가는 줄도 모르고<br>
+            앉은 자리에서 플레이 타임을 12시간을 기록해버렸다. 거진 출시된지 30년 정도 된 게임이지만, 이 게임의 곳곳에서 어디선가 느껴본듯한 익숙한 맛이 나는 것은<br>
+            분명 이 게임은 육성 시뮬레이션이라는 장르에 한 획을 그은 역사적인 게임이고 지금까지 수많은 게임들이 벤치마킹해왔기 때문일 것이리라 생각하고 있다.<br>
+            
+        </p>
+        <img src="assets/images/PrincessMaker/OliveOyl.jpg" alt="">
         <div class="footer"></div>
     </div>
 </body>
