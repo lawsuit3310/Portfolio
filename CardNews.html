@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[카드 뉴스] 202336961_민기홍</title>
+    <style>
+        @font-face {
+            font-family: "Esamanru Bold";
+            src: url(assets/fonts/esamanru_TTF/esamanru\ Bold.ttf);
+        }
+        @font-face {
+            font-family: "Esamanru Medium";
+            src: url(assets/fonts/esamanru_TTF/esamanru\ Medium.ttf);
+        }
+        @font-face {
+            font-family: "Esamanru Light";
+            src: url(assets/fonts/esamanru_TTF/esamanru\ Light.ttf);
+        }
+
+        * {font-family: "Esamanru Light"; color: inherit;}
+        :root{ --A4Height : 20.28cm; --mainColor1 : #E62D87; --mainColor2 : #01B7F2; --mainColor3 : #FAC803; --mainColor4 : #1F00F8;}
+        .clearfix::before, .clearfix::after { display: block; clear: both; content: '';}
+        .context {width: 29.7cm; min-height: var(--A4Height); margin: 0 auto; box-sizing: border-box;
+            position: relative; margin-bottom: 0.27cm;}
+        .header {width: inherit; height: 3.5cm; background-color: var(--mainColor); position: relative; color: white;}
+        .header h1 {text-align: center; width: inherit; height: 100%; float: left; font-size: 300%; letter-spacing: 2px; position: absolute; top: 8%;}
+        .footer {width: inherit; height: 1.5cm; background-color: var(--mainColor); bottom: 0px; position: absolute;}     
+
+        .page1 {position: relative;}
+        .page1 .container {background-image: url(assets/images/IdolyPride/KeyVisual.webp); background-repeat: no-repeat; background-size: auto 100%;
+            background-position: center; position: absolute; opacity: 90%;}
+        .page1 img {width: 10cm; margin-top: -1.25cm; margin-left: -1cm; position: absolute;}
+        .msg1 { width: 18cm; padding: 0; font-size: 1.5cm; right: 0.5cm; bottom: 0.5cm; position: absolute; border-collapse: collapse;}
+        .msg1 p {width: 2cm; height: 2cm; margin: 0cm; padding-top: 0.1cm; border: 1px solid black;
+            text-align: center; background-color: white; box-sizing: border-box; display: block; float: right; font-family: "Esamanru light";}
+
+        .page2 { position: relative; box-sizing: border-box; border: 0.5cm solid black;}
+        .page2 > * {position: absolute;}
+        .page2 p {font-size: 1.5cm;  float: left; margin-left: 1cm; margin-top: 1.2cm; height: 1cm; font-family: "Esamanru Medium";}
+        .page2 div {bottom: 5%; width: 100%; background-color: rgba(255, 255, 255, 0.6);  box-sizing: border-box; padding-top: 1cm; padding-left: 1cm;}
+        .adolf {width: 100%; opacity: 90%;}
+        .H { width: 8cm; top: 30%; right: 2%;}
+        .puhaha {width: 4cm; float: left;}
+
+        .page3 {background-color: #1F00F8; color: #dedefe; font-weight: lighter;}
+        .page3 img {float: left;}
+        .page3 .Explain { float: right; text-align: right; box-sizing: border-box; padding-right: 1cm;}
+        .page3 .Explain h2 { font-size: 3cm; margin-top: 2cm;}
+        .page3 .Explain p { font-size: 1.5cm; line-height: 2cm; height: 1cm; margin-top: -2cm;}
+
+        .page4 {}
+        .page4 img { float: right; height: 19.28cm; box-shadow: 0.5cm 0.5cm var(--mainColor3); margin-right: 1cm;}
+        .page4 p { float: left; font-size: 1.2cm;}
+
+        .page5 {position: relative;}
+        .page5 > div {width: 18.5cm;}
+        .page5 p {font-size: 1.1cm; text-align: right; position: absolute; right: 1cm; bottom: 1cm;}
+        .page5 .Live1 {background-color: black; height: 9cm; box-shadow: 0.5cm 0.5cm var(--mainColor2); margin-right: 1cm;
+            background-image: url(assets/images/IdolyPride/Rei2.jpg); background-position: center; background-size: auto 10cm; margin-bottom: 1cm;}
+        .page5 .Live2 {background-color: black; height: 9cm; box-shadow: 0.5cm 0.5cm var(--mainColor2); margin-right: 1cm;
+            background-image: url(assets/images/IdolyPride/Sakura.jpg); background-position: center; background-size: auto 10cm;}
+            
+        
+        .page6 {position: relative;}
+        .page6 > div {width: 18.5cm; float: right;}
+        .page6 p {font-size: 1.1cm; position: absolute; left: 1cm; bottom: 1cm;}
+        .page6 .Live1 {background-color: black; height: 9cm; box-shadow: 0.5cm 0.5cm var(--mainColor1); margin-right: 1cm;
+            background-image: url(assets/images/IdolyPride/Guys.jpg); background-position: center; background-size: auto 10cm; margin-bottom: 1cm;}
+        .page6 .Live2 {background-color: black; height: 9cm; box-shadow: 0.5cm 0.5cm var(--mainColor1); margin-right: 1cm;
+            background-image: url(assets/images/IdolyPride/Hashimoto.webp); background-position: center; background-size: auto 10cm;}
+
+        
+        .page7 {}
+        .page7 p { float: left; font-size: 1.2cm; width: 13cm; text-align: center; height: 5cm; vertical-align: middle; margin-top: 7.5cm;}
+        .page7 > div {float: right;}
+        .page7 > div > img {height: 19.28cm; box-shadow: 0.5cm 0.5cm var(--mainColor2); margin-right: 1cm; width: 15cm; object-fit: cover;}
+
+        .page8 {position: relative;}
+        .page8 img { float: left; height: 19.28cm; box-shadow: 0.5cm 0.5cm var(--mainColor3); margin-right: 1cm;}
+        .page8 .detail { height: 8cm;}
+        .page8 p {position: absolute; font-size: 1.1cm; text-align: right; bottom: 0.5cm; right: 1cm;}
+
+        .page9 {position:relative}
+        .page9 p {position: absolute; font-size: 1.1cm; text-align: right; bottom: 10.5cm; left: 1cm;}
+        .page9 div {text-align: right; width: 29.7cm;}
+        .page9 img {object-fit: cover; width: 3cm; height: 9cm; box-shadow: 0.5cm 0.5cm #111111; margin-right: 1cm; object-position: -3.8cm;}
+
+        .page10 {position: relative;}
+        .page10 img { float: right; height: 13.5cm; box-shadow: 0.5cm 0.5cm var(--mainColor1); margin-right: 1cm; margin-top: 1cm;}
+        .page10 p { float: left; font-size: 1.2cm; position: absolute; bottom: 0; right: 1cm; text-align: right; line-height: 1.6cm;}
+
+        
+        .page11 {position: relative;}
+        .page11 > div {width: 18cm; float: left;}
+        .page11 p {font-size: 1.1cm; position: absolute; right: 1cm; bottom: -0.5cm; text-align: right;}
+        .page11 .Live1 {background-color: black; height: 9.5cm; box-shadow: 0.5cm 0.5cm var(--mainColor2); margin-left: 1cm;
+            background-image: url(assets/images/IdolyPride/Haruko.jpg); background-position: center; background-size: auto 9.6cm; margin-bottom: 1cm;}
+        .page11 .Live2 {background-color: black; height: 9.5cm; box-shadow: 0.5cm 0.5cm var(--mainColor2); margin-left: 1cm;
+            background-image: url(assets/images/IdolyPride/Kokoro2.jpg); background-position: center; background-size: auto 9.6cm;}
+
+        .page12 {background-color: var(--mainColor4); height: 20.28cm; color: white;}
+        .page12 p { float: left; font-size: 1.2cm; width: 11cm; text-align: center; height: 5cm; vertical-align: middle; margin-top: 8.5cm;}
+        .page12 span {font-weight: bold; letter-spacing: 3px;}
+        .page12 > div {float: right;}
+        .page12 > div > img {height: 20.28cm; margin-right: 0; width: 18cm; object-fit: cover; object-position: right;}
+    </style>
+</head>
+<body>
+    <div class="context page1">
+        <div class="context container"></div>
+        <img src="assets/images/IdolyPride/QualiArts.png">
+        <div class="msg1">
+            <p>를</p><p>드</p><p>이</p><p>라</p><p style="background-color: var(--mainColor3);">프</p><p>리</p><p style="background-color: var(--mainColor2);">돌</p><p>이</p><p style="background-color: var(--mainColor1);">아</p>
+            <p>다</p><p>니</p><p>합</p><p>개</p><p>소</p>
+        </div>
+    </div>
+    <div class="context page2">
+        <img class = "adolf" src="assets/images/IdolyPride/Adolf.png" alt="">
+        <div class="clearfix">
+            <img class = "puhaha" src = "assets/images/IdolyPride/Puhaha.png">
+            <p>어떻게 게임 이름이 아돌프 ㅋㅋㅋ</p>
+        </div>
+        <img class = "H" src="assets/images/IdolyPride/Adolf.jfif" alt="">
+    </div>
+    <div class="context page3 clearfix">
+        <img src="assets/images/IdolyPride/ShinePurity.jpg">
+        <div class="Explain">
+            <h2>그래서</h2>
+            <p>아이프라는<br> 어떤 게임일까?</p>
+        </div>
+    </div>
+    <div class="context page4 clearfix">
+        <img src="assets/images/IdolyPride/Mei.jpg">
+        <img src="assets/images/IdolyPride/Yuu.jpg">
+        
+        <p>때로는<br><b>땀</b>과 <b>노력</b>이 있고</p>
+    </div>
+    <div class="context page5 clearfix">
+        <div>
+            <div class="Live1"></div>
+            <div class="Live2"></div>
+        </div>
+        <p>때로는 눈길을<br>사로 잡는 <b>라이브</b>가,</p>
+    </div>
+    <div class="context page6 clearfix">
+        <div>
+            <div class="Live1"></div>
+            <div class="Live2"></div>
+        </div>
+        <p>때로는<br><b>의외성</b>이 있는</p>
+    </div>
+    <div class="context page7 clearfix"> 
+        <p>
+            아이돌 육성 RPG
+            <img src="assets/images/IdolyPride/IP.png">
+        </p>
+        <div class="clearfix">
+            <img src="assets/images/IdolyPride/Mana2.jpg">
+        </div>
+    </div>
+    <div class="context page8">
+        <img src="assets/images/IdolyPride/Aoi.jpg">
+        <img src="assets/images/IdolyPride/Mei2.jpg">
+        <img src="assets/images/IdolyPride/Mana.jpg" alt="" class="detail">
+        <img src="assets/images/IdolyPride/Miho2.jpg" alt="" class="detail">
+        <p>높은 퀄리티의<br>다양한 의상들</p>
+    </div>
+    <div class="context page9 clearfix">
+        <p>각자 특색을 가진<br><b>21명의 아이돌</b>들</p>
+        <div>
+            <img src="assets/images/IdolyPride/Kotono.webp" alt="">
+            <img src="assets/images/IdolyPride/Rio.webp" alt="">
+            <img src="assets/images/IdolyPride/Miho.webp" alt="">
+            <img src="assets/images/IdolyPride/Fran.webp" alt="">
+            <img src="assets/images/IdolyPride/Chisa.webp" alt="">
+        </div>
+        <div>
+            <img src="assets/images/IdolyPride/Saki.webp" alt="">
+            <img src="assets/images/IdolyPride/Mana.webp" alt="">
+            <img src="assets/images/IdolyPride/Aoi.webp" alt="">
+            <img src="assets/images/IdolyPride/Yuu.webp" alt="">
+            <img src="assets/images/IdolyPride/Haruko.webp" alt="">
+            <img src="assets/images/IdolyPride/Kokoro.webp" alt="">
+            <img src="assets/images/IdolyPride/Sizuku.webp" alt="">
+        </div>
+    </div>
+    <div class="context page10 clearfix">
+        <p>대화, 문자, 전화를 통한<br>아이돌들과의 커뮤니케이션</p>
+        <img src="assets/images/IdolyPride/Message.jpg">
+        <img src="assets/images/IdolyPride/Message2.jpg">
+        <img src="assets/images/IdolyPride/Sakura2.jpg">
+        <img src="assets/images/IdolyPride/Rei3.jpg">
+    </div>
+
+    <div class="context page11 clearfix">
+        <div>~
+            <div class="Live1"></div>
+            <div class="Live2"></div>
+        </div>
+        <p>좋아하는 아이돌의<br> 모습을 <b>사진</b>으로<br> 남겨두자</p>
+    </div>
+    <div class="context page12 clearfix"> 
+        <p>
+            <span>IDOLY PRIDE</span>가<br>
+            걸어온 길
+        </p>
+        <div class="clearfix">
+            <img src="assets/images/IdolyPride/1stAnniversary.webp">
+        </div>
+    </div>
+    <div class="context page13"></div>
+</body>
+</html>~~
