@@ -30,7 +30,7 @@
 
         .page1 {position: relative;}
         .page1 .container {background-image: url(assets/images/IdolyPride/KeyVisual.webp); background-repeat: no-repeat; background-size: auto 100%;
-            background-position: center; position: absolute; opacity: 90%;}
+            background-position: center; position: absolute; opacity: 50%;}
         .page1 img {width: 10cm; margin-top: -1.25cm; margin-left: -1cm; position: absolute;}
         .msg1 { width: 18cm; padding: 0; font-size: 1.5cm; right: 0.5cm; bottom: 0.5cm; position: absolute; border-collapse: collapse;}
         .msg1 p {width: 2cm; height: 2cm; margin: 0cm; padding-top: 0.1cm; border: 1px solid black;
@@ -105,6 +105,30 @@
         .page12 span {font-weight: bold; letter-spacing: 3px;}
         .page12 > div {float: right;}
         .page12 > div > img {height: 20.28cm; margin-right: 0; width: 18cm; object-fit: cover; object-position: right;}
+
+        .page13 {display: block;}
+        .page13 .container {width: inherit; height: var(--A4Height);background-image: url(assets/images/IdolyPride/KeyVisual.webp); background-repeat: no-repeat; background-size: auto 100%;
+            background-position: center; position: absolute; opacity: 90%;}
+        .page13 .overText {float : right; width: 12.5cm; height: 100%; padding : 1.5cm; padding-right: 0.8cm; box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.6); margin: 0; color: white;}
+        .page13 .overText h2{font-size: 1.2cm;}
+        .page13 .overText p{font-size: 0.9cm; text-align: right;}
+
+        .page14 {}
+        .page14 p{font-size: 1.1cm; line-height: 1.5cm; width: 10cm; float: left;}
+        .page14 p span {font-size: 0.9cm;}
+        .page14 img {width: 9cm; float: right; box-shadow: 0.5cm 0.5cm var(--mainColor2); margin-right: 1cm;}
+
+        .page15 img.mikuLive{height: 19.5cm; width: 14cm; box-shadow: 0.5cm 0.5cm var(--mainColor2); object-fit: cover; object-position: center;}
+        .page15 img.mikuBanner {float: right; margin-right: 1cm; width: 13.5cm; box-shadow: 0.5cm 0.5cm var(--mainColor2);}
+        .page15 p{font-size: 1.1cm; position: absolute; right: 1cm; bottom: -0.5cm; text-align: right;}
+        .page15 sub{font-size: 0.4cm;}
+        .page15 p span {color: #FF0090; font-size: 1.3cm; font-weight: bold; letter-spacing: 0.1cm;
+            -webkit-text-stroke: 2px white; font-family: "Esamanru Bold";
+            text-shadow:-0.1cm 0.1cm #86cecb ,
+                        -0.1cm -0.1cm #86cecb,
+                        0.1cm -0.1cm #86cecb,
+                        0.1cm 0.1cm #86cecb;}
     </style>
 </head>
 <body>
@@ -210,6 +234,32 @@
             <img src="assets/images/IdolyPride/1stAnniversary.webp">
         </div>
     </div>
-    <div class="context page13"></div>
+    <div class="context page13">
+        <div class="container clearfix">
+            <div class="overText">
+                <h2>2021 / 6 / 24</h2>
+                <p>일본 서비스 출시</p>
+                <h2>2022 / 4 / 27</h2>
+                <p>한국 서비스 출시</p>
+                <h2>2023 / 6 / 1</h2>
+                <p>글로벌 서비스 출시</p>
+            </div>
+        </div>
+    </div>
+    <div class="context page14">
+        <p>2022 / 06 / 27 <br>
+            <span>서비스 개시 1주년 달성<br>
+                신규 그룹 IIIX의 출시</span>
+        </p>
+        <img src="assets/images/IdolyPride/IIIX.webp" alt="">
+    </div>
+    <div class="context page15 clearfix">
+        <img class = "mikuLive" src="assets/images/IdolyPride/Miku.webp" alt="">
+        <img class = "mikuBanner" src="assets/images/IdolyPride/Miku2.webp" alt="">
+        <p>
+            2022 / 08 / 31 <br>
+            <span> 하츠네 미쿠</span> 콜라보
+        </p>
+    </div>
 </body>
-</html>~~
+</html>
