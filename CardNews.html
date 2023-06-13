@@ -114,10 +114,16 @@
         .page13 .overText h2{font-size: 1.2cm;}
         .page13 .overText p{font-size: 0.9cm; text-align: right;}
 
-        .page14 {}
-        .page14 p{font-size: 1.1cm; line-height: 1.5cm; width: 10cm; float: left;}
-        .page14 p span {font-size: 0.9cm;}
-        .page14 img {width: 9cm; float: right; box-shadow: 0.5cm 0.5cm var(--mainColor2); margin-right: 1cm;}
+        .page14 div.left {width: 14cm; float: left;}
+        .page14 div.left img {float: left; width: 3.6cm; height: 9cm; box-shadow: 0.5cm 0.5cm #ffec45; }
+        .page14 div.left img.Kana { object-fit: cover;  margin-right: 1cm;}
+        .page14 div.left img.Miho { object-fit: cover; margin-right: 1cm;}
+        .page14 div.left img.Fran { object-fit: cover; margin-right: 1cm;}
+        .page14 p, .page15 h2{font-size: 1.1cm; line-height: 1.5cm; width: 14cm; float: left; height: 4cm;}
+        .page14 h2 {height: 1cm; font-size: 1cm;}
+        .page14 p span {font-size: 1.3cm; line-height: 1.8cm}
+        .page14 img.IIIX {width: 14cm; margin-top: 1cm; float: right; box-shadow: 0.5cm 0.5cm #ffec45; margin-right: 1cm;
+            object-fit: cover; height: 17cm; object-position: -0.6cm;}
 
         .page15 img.mikuLive{height: 19.5cm; width: 14cm; box-shadow: 0.5cm 0.5cm var(--mainColor2); object-fit: cover; object-position: center;}
         .page15 img.mikuBanner {float: right; margin-right: 1cm; width: 13.5cm; box-shadow: 0.5cm 0.5cm var(--mainColor2);}
@@ -129,6 +135,13 @@
                         -0.1cm -0.1cm #86cecb,
                         0.1cm -0.1cm #86cecb,
                         0.1cm 0.1cm #86cecb;}
+
+        .page16 {position : relative}
+        .page16 h2{font-size: 1.3cm; position: absolute; right: 1cm; top: -0.5cm; text-align: right;}
+        .page16 p{font-size: 1cm; position: absolute; right: 1cm; top: 1.3cm; text-align: right; -webkit-text-stroke: white 0.2px;}
+        .page16 img {object-fit: cover; width: 6.3cm; height: 8.5cm; box-shadow: 0.5cm 0.5cm var(--mainColor1); margin-right: 1cm; margin-bottom: 1cm;}
+        .page16 img.reiOrigin {object-position: -4.5cm;}
+        .page16 img.manaSide {object-position: center 0cm;}
     </style>
 </head>
 <body>
@@ -192,7 +205,7 @@
         <p>높은 퀄리티의<br>다양한 의상들</p>
     </div>
     <div class="context page9 clearfix">
-        <p>각자 특색을 가진<br><b>21명의 아이돌</b>들</p>
+        <p>각자 특색을 가진<br><b>21명의 아이돌</b></p>
         <div>
             <img src="assets/images/IdolyPride/Kotono.webp" alt="">
             <img src="assets/images/IdolyPride/Rio.webp" alt="">
@@ -247,19 +260,38 @@
         </div>
     </div>
     <div class="context page14">
-        <p>2022 / 06 / 27 <br>
-            <span>서비스 개시 1주년 달성<br>
-                신규 그룹 IIIX의 출시</span>
-        </p>
-        <img src="assets/images/IdolyPride/IIIX.webp" alt="">
+        <div class="left clearfix">
+            <h2>2022 / 06 / 27</h2>
+            <p>
+                <span>서비스 개시 <b>1주년</b> 달성<br>
+                    신규 그룹 <b style="font-family: Esamanru Medium; color : #ffec45; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);">IIIX </b>의 출시</span>
+            </p>
+            <img class = "Kana" src="assets/images/IdolyPride/Kana.jpg" alt="">
+            <img class = "Miho" src="assets/images/IdolyPride/Miho3.jpg" alt="">
+            <img class = "Fran" src="assets/images/IdolyPride/Fran.jpg" alt="">
+        </div>
+        <img class = "IIIX" src="assets/images/IdolyPride/IIIX.webp" alt="">
     </div>
     <div class="context page15 clearfix">
         <img class = "mikuLive" src="assets/images/IdolyPride/Miku.webp" alt="">
         <img class = "mikuBanner" src="assets/images/IdolyPride/Miku2.webp" alt="">
         <p>
-            2022 / 08 / 31 <br>
-            <span> 하츠네 미쿠</span> 콜라보
+            <b>2022 / 08 / 31</b> <br>
+            <span> 하츠네 미쿠</span>와의 콜라보
         </p>
+    </div>
+    <div class="context page16">
+        <h2>2022 / 10 / 24</h2><br>
+        <p>
+            아이돌의 다양한 모습을 볼 수 있는<br> 헤어 스타일 추가
+        </p>
+
+        <img src="assets/images/IdolyPride/Suzu2.jpg" alt="">
+        <img src="assets/images/IdolyPride/Suzu.jpg" alt=""><br>
+        <img class = "reiOrigin" src="assets/images/IdolyPride/Rei5.jpg" alt="">
+        <img src="assets/images/IdolyPride/Rei4.jpg" alt="">
+        <img src="assets/images/IdolyPride/Mana5.jpg" alt="">
+        <img class = "manaSide" src="assets/images/IdolyPride/Mana4.jpg" alt="">
     </div>
 </body>
 </html>
