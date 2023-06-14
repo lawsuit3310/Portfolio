@@ -159,11 +159,13 @@
         .page18 img.InGame {float: right; width: 16cm; margin-bottom: 1cm;}
         .page18 div.imgs img{float: left; height: 8.8cm;}
         
-        .page19 {background-color: var(--mainColor4); color: white; position: relative;}
-        .page19 h2 {position: absolute; line-height: 1.5cm; top: 7cm; left: 1cm; font-size: 0.8cm; letter-spacing: 2px; font-weight: lighter;}
-        .page19 h2 span {font-weight: bold;}
-        .page19 img {float: right; width: 20cm; height: var(--A4Height); object-fit: cover;}
-    </style>
+        .end {position: relative;}
+        .end div.Background{width : 100%; height: var(--A4Height); position: absolute; top: 0; left: 0; z-index: -999;
+            background-image: url(assets/images/IdolyPride/Hoshimi.png); background-size: auto 100%; background-position: center; opacity: 20%;}
+        .end div.container{ padding-left: 2cm; padding-top: 2cm; }
+        .end div.container h2 {font-size: 1.2cm;}
+        .end div.container li {line-height: 2cm; font-size: 0.8cm; list-style: image-set(url);}
+</style>
 </head>
 <body>
     <div class="context page1">
@@ -331,12 +333,17 @@
         </div>
     </div>
     
-    <div class="context page19">
-        <h2>그렇다면 <br><span>IDOLY PRPIDE</span>는<br>어떻게 만들어졌을까</h2>
-        <img src="assets/images/IdolyPride/Hoshimi.png" alt="">
-    </div>
-    <div class="context page20">
-        
+    <div class="context end">
+        <div class="Background"></div>
+        <div class="container">
+            <h2>자료 참조</h2>
+            <ul>
+                <li>https://idolypride.jp/</li>
+                <li>https://technote.qualiarts.jp/</li>
+                <li>https://twitter.com/idolypride</li>
+                <li>https://game.naver.com/lounge/IDOLY_PRIDE/home</li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
