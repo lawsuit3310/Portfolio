@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>프로필</title>
+    <style>
+        @font-face {
+            font-family: "Esamanru Bold";
+            src: url(assets/fonts/esamanru_TTF/esamanru\ Bold.ttf);
+        }
+        @font-face {
+            font-family: "Esamanru Medium";
+            src: url(assets/fonts/esamanru_TTF/esamanru\ Medium.ttf);
+        }
+        @font-face {
+            font-family: "Esamanru Light";
+            src: url(assets/fonts/esamanru_TTF/esamanru\ Light.ttf);
+        }
+
+        * {font-family: "Esamanru Light"; color: inherit;}
+
+        :root{ --A4Height : 20.28cm; --mainColor : #216;}
+        table {border-collapse: collapse;}
+        tr, td, th { border : 1px solid black; padding : 0.8cm 1cm; box-sizing: border-box;}
+        .clearfix::before, .clearfix::after { display: block; clear: both; content: '';}
+        .context {width: 29.7cm; min-height: var(--A4Height); margin: 0 auto; box-sizing: border-box;
+            position: relative; margin-bottom: 0.27cm;}
+        .header {width: inherit; height: 3.5cm; background-color: var(--mainColor); position: relative; color: white;}
+        .header h1 {text-align: center; width: inherit; height: 100%; float: left; font-size: 300%; letter-spacing: 2px; position: absolute; top: 8%;}
+        .footer {width: inherit; height: 1.5cm; background-color: var(--mainColor); bottom: 0px; position: absolute;}
+
+        .context {background-color: #eee; box-sizing: border-box; padding: 1cm;}
+
+        img.MugShot {width: 5cm; position: absolute; top : 35%; left : 40.25%;
+        border: 0.2cm double black; padding: 0.1cm;}
+        
+        img.Tanoshi {width: 5cm; position: absolute; bottom : 5%; left : 40.75%;
+        padding: 0.1cm; bottom: 2.5%;}
+
+        h1 {height: 0px; width: 7cm; text-align: center; font-size: 2cm; letter-spacing: 0.4cm;
+            font-weight: lighter; position: absolute; left: 38%;}
+
+        h5 {height: 0px; width: 7cm; text-align: center; font-size: 1cm; letter-spacing: 0.4cm;
+            font-weight: lighter; position: absolute; left: 38%; top: 16%;}
+
+        h6 {height: 0px; width: 7cm; text-align: center; font-size: 0.8cm; letter-spacing: 0.4cm;
+            font-weight: lighter; position: absolute; left: 38%; top: -2%;}
+        h6.pickupMe { width: 8cm; top: 56.25%; text-align: center; left: 37%;}
+
+        .left {float: left; position: relative; width: 13cm;}
+        .left > p {float: right; width: 9.5cm; text-align: right; line-height: 1.5cm; font-size: 0.6cm;
+            margin-top: 2.5cm;}
+        .left > img {height: 12cm; width: 9cm;}
+        .left > img.app {height: 6cm; width: 3cm;}
+
+        .right {float: right; position: relative; width: 13cm; height: 18cm;}
+        .right > img {height: 12cm; width: 10cm; position: absolute; bottom: 0px; right: 0;}
+        
+        </style>
+</head>
+<body>
+    <div class="context">
+        <img class = "MugShot" src="assets/images/DimSumSans.png" alt="">
+        <h6>이름</h6>
+        <h1>민기홍</h1>
+        <h5>개발자</h5>
+        <div class="clearfix">
+            <div class="left clearfix">
+                <img src="assets/images/Java.png" alt="">
+                <div class="clearfix"></div>
+                <img src="assets/images/app.png" class="app" alt="">
+                <p>
+                    JAVA와 Google Firebase를 활용한<br>
+                    안드로이드 어플리케이션 제작
+                </p>
+            </div>
+            <div class="right">
+                <img src="assets/images/IdolyPride/Adolf.jfif" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
