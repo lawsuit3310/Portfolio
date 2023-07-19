@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = "arthor" content = "lawsuit3310">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발 일지</title>
+    <style>
+        @font-face {
+            font-family: "Esamanru Bold";
+            src: url(assets/fonts/esamanru_TTF/esamanru\ Bold.ttf);
+        }
+        @font-face {
+            font-family: "Esamanru Medium";
+            src: url(assets/fonts/esamanru_TTF/esamanru\ Medium.ttf);
+        }
+        @font-face {
+            font-family: "Esamanru Light";
+            src: url(assets/fonts/esamanru_TTF/esamanru\ Light.ttf);
+        }
+
+        * {font-family: "Esamanru Light"; color: inherit;}
+        :root{ --A4Height : 30.69cm; --mainColor : rgb(32, 8, 8);}
+        table {border-collapse: collapse;}
+        tr, td, th { border : 1px solid black; padding : 0.8cm 1cm; box-sizing: border-box;}
+        .clearfix::before, .clearfix::after { display: block; clear: both; content: '';}
+        .context {width: 21cm; min-height: var(--A4Height); margin: 0 auto; box-sizing: border-box; 
+            position: relative; margin-bottom: 0.27cm;}
+        .header {width: inherit; height: 2.5cm; background-color: var(--mainColor); position: relative; color: white; padding: 0.8cm; box-sizing: border-box;}
+        .footer {width: inherit; height: 2.5cm; background-color: var(--mainColor); position: absolute; color: white; padding: 0.8cm; box-sizing: border-box; bottom: 0;}
+        .header h1 {text-align: center; vertical-align: center; height: 1cm; margin: 0; letter-spacing: 0.15cm;}
+
+        * a {text-decoration: none;}
+        * a:hover {text-decoration: underline;}
+
+        .page1 > span {position: absolute; right: 0; margin-top: 1cm; font-size: 0.6cm;}
+        .page1 > ul {border: 1px solid black; margin-top: 5cm; margin-left:1.5cm; width: 10cm; height: 13.5cm; box-sizing: border-box;}
+        .page1 ul div {font-size: 1cm; margin : 0.5cm 0;}
+        .page1 ul div.process {margin : 0.5cm 0; font-size: 0.5cm;}
+        .page1 > ul > li {height: 4cm; line-height: 1cm;}
+        .page1 > ul > li > ul > li {line-height: 1.5cm;}
+
+        .page2 h1 {margin: 1cm 0 0 1cm;}
+        .page2 .management {margin: 2cm 0 0 2cm; width: 17cm;}
+        .page2 .management h2 {font-weight: lighter;}
+        .page2 .management figure {overflow: hidden;}
+        .page2 .management figcaption {text-align: center; margin-top: 0.5cm;}
+        .page2 .management img {width: 25cm;}
+        .page2 h3 {float: right; margin-right: 2cm; font-weight: lighter; font-size: 0.8cm;}
+
+        .page3 h2 {margin-left: 1cm;}
+        .page3 > figure {margin-top: -1cm;}
+        .page3 figcaption {text-align: center;}
+        .page3 > div > figure > img { height: 2cm; margin-top: 2cm; object-fit: cover; width: 18.5cm;}
+        .page3 > div > p {line-height: 0.8cm; padding: 0 1cm;}
+        .status {height: 9cm;}
+        .status > img {object-fit: none; height: 8.5cm; width: 18.5cm; margin-top: 0.5cm;}
+
+        .page4 > figure {margin-top: -1cm;}
+        .page4 figcaption {text-align: center;}
+        .page4 > div > figure {float: left; width: 8.3cm;}
+        .page4 > figure { margin: 0 auto;}
+        .page4 > figure > img {width: 13cm; margin-left: 4cm;}
+        .page4 > div > figure > img { width: 8.3cm; height: 4.6cm;}
+        .page4 > div > p {line-height: 0.8cm; padding: 0 1cm;}
+        .page4 h1 {margin: 1cm 0 0 1cm;}
+        .page4 h3 {float: right; margin-right: 2cm; font-weight: lighter; font-size: 0.8cm;}
+
+        .page5 > figure {margin-top: -1cm;}
+        .page5 figcaption {text-align: center;}
+        .page5 > div > figure {width: 8.3cm; float: left;}
+        .page5 > div > figure > img { height: 6.8cm; margin-top: 0.5cm; width: 8.3cm; object-fit: cover; object-position: top ;}
+        .page5 > div > p {line-height: 0.8cm; padding: 0 1cm;}
+        .page5 > figure > img {width: 14cm; margin-left: 2.5cm;}
+
+        .page6 h1 {margin: 1cm 0 0 1cm;}
+        .page6 h2 {margin: 1cm 0 0 1cm;}
+        .page6 figcaption {text-align: center;}
+        .page6 h3 {float: right; margin-right: 2cm; font-weight: lighter; font-size: 0.8cm;}
+        .page6 > div > p {line-height: 0.8cm; padding: 0 1cm;}
+        .page6 > figure > img {width: 18.8cm; }
+        .page6 > figure:nth-child(6) > img{ width: 12cm; margin-left: 3.2cm;}
+
+        .page7 h2 {margin: 1cm 0 0 1cm;}
+        .page7 figcaption {text-align: center;}
+        .page7 > div > p {line-height: 0.8cm; padding: 0 1cm;}
+        .page7 > figure:nth-child(2) > img {width: 14cm; margin-left: 2.2cm; }
+        .page7 > div > figure {width: 8.3cm; float: left;}
+        .page7 > div > figure > img { height: 5cm; margin-top: 0.5cm; width: 8.3cm; object-fit: cover; object-position: top ;}
+        .page7 > figure:nth-child(4) > img {width: 10cm; margin-left: 4.2cm; }
+
+        
+        .page8 h1 {margin: 1cm 0 0 1cm;}
+        .page8 h2 {margin: 1cm 0 0 1cm;}
+        .page8 figcaption {text-align: center;}
+        .page8 h3 {float: right; margin-right: 2cm; font-weight: lighter; font-size: 0.6cm;}
+        .page8 > div > p {line-height: 0.8cm; padding: 0 1cm;}
+        .page8 > figure:nth-child(3) > img{ width: 12cm; margin-left: 3.2cm;}
+
+        .page9 h1 {margin: 1cm 0 0 1cm;}
+        .page9 h2 {margin: 1cm 0 0 1cm;}
+        .page9 figcaption {text-align: center;}
+        .page9 h3 {float: right; margin-right: 2cm; font-weight: lighter; font-size: 0.6cm;}
+        .page9 > div > figure {width: 8.3cm; float: left;}
+        .page9 > div > figure > img { height: 9cm; margin-top: 0.5cm; width: 9cm; object-fit: cover; object-position: top ;}
+        .page9 > div > p {line-height: 0.8cm; padding: 0 1cm;}.page9 h1 {margin: 1cm 0 0 1cm;}
+
+        .page10 h2 {margin: 1cm 0 0 1cm;}
+        .page10 figcaption {text-align: center;}
+        .page10 h3 {float: right; margin-right: 2cm; font-weight: lighter; font-size: 0.6cm;}
+        .page10 > div > figure {width: 8.3cm; float: left;}
+        .page10 > div > figure > img { height: 7cm; margin-top: 0.5cm;  object-fit: cover; object-position: top ;}
+        .page10 > div > p {line-height: 0.8cm; padding: 0 1cm;}
+        .page10 > figure:nth-child(2) > img{ width: 12cm; margin-left: 3.3cm;}
+        .page10 > figure:nth-child(6) > img{ width: 9cm; height: 5cm; margin-left: 5.3cm; object-fit: cover; object-position: top;}
+        
+        .page11 h1 {margin: 1cm 0 0 1cm;}
+        .page11 h2 {margin: 1cm 0 0 1cm;}
+        .page11 figcaption {text-align: center;}
+        .page11 h3 {float: right; margin-right: 2cm; font-weight: lighter; font-size: 0.8cm;}
+        .page11 > div > figure {width: 8.3cm; float: left;}
+        .page11 > div > figure > img { height: 7cm; margin-top: 0.5cm;  object-fit: cover; object-position: top ;}
+        .page11 > div > p {line-height: 0.8cm; padding: 0 1cm;}
+        .page11 > figure > img{ width: 14cm; margin-left: 2.3cm;}
+
+        .page12 h2 {margin: 1cm 0 0 1cm;}
+        .page12 figcaption {text-align: center;}
+        .page12 > div > p {line-height: 0.8cm; padding: 0 1cm;}
+        .page12 > figure:nth-child(3) > img{ width: 16cm; margin-left: 1.8cm;}
+
+        .page13 h2 {margin: 1cm 0 0 1cm;}
+        .page13 > div > p {line-height: 0.8cm; padding: 0 1cm;}
+
+    </style>
+</head>
+<body>
+    <div class="context page1">
+        <header class="header"><h1>개발 일지</h1></header>
+        <span>2023366961&nbsp; 민기홍</span>
+        <footer class="footer"></footer>
+        <ul>
+            <div>목차</div>
+            <div class="process">개발 과정</div>
+            <li>1주차 ( 6/28 ~ 7/8 ) 개발 진행 내용
+                <ul>
+                    <li>플레이어의 개발</li>
+                    <li>DB와의 연동</li>
+                </ul>
+            </li>
+            <li>2주차 (7/9 ~ 7/14) 개발 진행 내용
+                <ul>
+                    <li>STTAGE 3 보스의 제작 </li>
+                    <li>전투 시스템의 구현</li>
+                </ul>
+            </li>
+            <li>마무리 (7/17 ~ 7/18)</li>
+        </ul>
+    </div>
+    <div class="context page2">
+        <h1>개발 과정</h1>
+        <div class="management">
+            <h2>개발 일정의 관리</h2>
+            <figure><img src="assets/images/Specification/Schedule.png" alt=""><figcaption>▲ <b>[ 자료 1 ]</b> notion을 통해 개발 일정을 시각화한 모습</figcaption></figure><br>
+            <p>notion과 discord등을 활용하여 개발 일정을 조율하며, 개발을 진행하였습니다.</p>
+        </div>
+        <br>   
+        <h1>1주차 개발 진행 내용</h1>
+        <h3> - 플레이어 개발 (6/28 ~ 7/10)</h3>
+        
+        <footer class="footer"></footer>
+    </div>
+    <div class="context page3">
+        <div>
+            <figure><img src="assets/images/Specification/Player.png" alt=""><figcaption>▲ <b>[ 자료 2 ]</b> 플레이어 컴포넌트</figcaption></figure><br>
+            <p>
+                &nbsp;플레이어를 구현함에 있어 첫 번째로 고려했었던 사항은 Soullike 라는 장르의 핵심적 요소인<br>
+                "적과의 전투" 를 구현하기 위해 플레이어와 적이 동시에 가지는 여러 특성들, 예를 들어 체력과 같은<br>
+                스테이터스의 존재와 그것들을 변화시키는 여러 메소드 등을 이후 플레이어와 전투를 할 적을 개발하면서<br>
+                재활용할 수 있도록 하는 클래스를 설계하는 것이였습니다. <br>
+    
+                &nbsp;또한 스테이터스와 같이 전투가 가능한 오브젝트들이 가지는 값들의 경우에는 따로 VO클래스를 만들어<br>
+                추후 DB와의 연동이 용이하도록 하였으며, Serializable 속성을 부여하여 UnityEditor에서 쉽게 <br>
+                관리할 수 있도록 하였습니다. <br>
+            </p>
+        </div>
+        <figure class = "status"><img src="assets/images/Specification/Status.png" alt=""><figcaption>▲ <b>[ 자료 3 ] </b>UnityEditor 상에서 표시되는 스테이터스</figcaption></figure><br>
+        <div>
+            <p>
+                &nbsp; 이후 플레이어가 행사할 수 있는 여러 행위, 구르기와 같은 회피 동작과 공격, "갈고리를 통한 이동" 의<br>
+                구현을 목표로 개발을 진행하였습니다.
+            </p>
+        </div>
+        <footer class="footer"></footer>
+    </div>
+    <div class="context page4">
+        <div class="clearfix">
+            <br>
+            <figure><img src="assets/images/Specification/Actions.gif" alt=""><figcaption>▲ <b>[ 자료 4 ]</b> 플레이어의 동작들</figcaption></figure>
+            <figure><img src="assets/images/Specification/Command.png" alt=""><figcaption>▲ <b>[ 자료 5 ]</b> 입력을 받기 위한 스크립트</figcaption></figure><br>
+            <p>
+                &nbsp; 플레이어의 행위과 관련한 코드들은 기본적으로는 플레이어 컴포넌트 내에서만 제한적으로 <br>
+                사용되고 있기 때문에, 코드를 간결화하기 위해서 대리자와 람다 식을 활용하여 플레이어의 동작을<br>
+                구현하였습니다.<br>
+                &nbsp; 또한 공격이나 회피와 같은 애니메이션을 동반하는 행위들은 Corutine과 Unity API에서 기본적으로<br>
+                제공하는 기능인 Animation Event를 통해 구현하였습니다.
+            </p>
+        </div><br>
+        <div class="clearfix">
+            <figure><img src="assets/images/Specification/Animator.png" alt=""><figcaption>▲ <b>[ 자료 6 ]</b> 플레이어의 애니메이션을<br> 제어하는 화면</figcaption></figure>
+            <figure><img src="assets/images/Specification/Dodge.gif" alt=""><figcaption>▲ <b>[ 자료 7 ]</b> 플레이어의 회피 애니메이션</figcaption></figure><br>
+        </div>
+        <div>
+            <h1>1주차 개발 진행 내용</h1>
+            <h3> - DB와의 연동 (7/4 ~ 7/7)</h3>
+            <div class="clearfix"></div>
+            <p>
+                &nbsp;게임의 진행 상황을 저장하는 기능이나, 멀티 플레이어 게임을 개발함에 있어 데이터베이스(이하 DB)와의<br>
+                연동은 필수불가결하며, 이를 위해 SQLite를 활용한 데이터베이스 구축과 연동을 목표로 개발을<br>
+                진행하였습니다.<br>
+            </p>
+        </div>
+        <footer class="footer"></footer>
+    </div>
+    <div class="context page5">
+        <div>            
+            <figure><img src="assets/images/Specification/DataController.png" alt=""><figcaption>▲ <b>[ 자료 9 ]</b> DB와의 연동을 위해 사용하는<br>컨트롤러</figcaption></figure>
+            <figure><img src="assets/images/Specification/PlayerModels.png" alt=""><figcaption>▲ <b>[ 자료 10 ]</b> 플레이어 오브젝트들을<br>모아놓은 폴더</figcaption></figure><br>
+            <div class="clearfix"></div>
+            <p>
+                DB와의 연동을 통해 현재 위치를 저장했다가 게임 시작 시에 불러올 수 있게 되었으며, 게임 내에서<br>
+                현재 설정에 맞는 모델을 직접 불러와 사용하게 하는, 일종의 커스터마이징 기능을 개발 해두었으나, <br>
+                개발기간의 부족으로 기본적인 Unity-Chan 오브젝트와 로드에 실패 했을 경우 사용하는 더미 오브젝트, <br>
+                2종류 간에 변환이 가능하도록 구현해두었습니다.
+            </p>
+        </div><br><br><br><br>
+        <figure><img src="assets/images/Specification/Transform.gif" alt=""><figcaption>▲ <b>[ 자료 11 ]</b> 게임 시작 시 플레이어 오브젝트를 자동으로 세팅</figcaption></figure><br>
+    <footer class="footer"></footer>
+    </div>
+    <div class="context page6">
+        <div>
+            <h1>2주차 개발 진행 내용</h1>
+            <h3> - 보스 캐릭터의 제작 (7/10 ~ 7/17)</h3>
+            <div class="clearfix"></div>
+            <h2>7/10</h2>
+            <p>
+                &nbsp; 보스 캐릭터 또한 플레이어와 같이 전투가 가능한 오브젝트이기 때문에 플레이어를 제작하면서<br>
+                미리 만들어 두었던 클래스를 재활용하여 제작하게 되었습니다.<br>
+            </p><br>
+        </div>
+        <figure><img src="assets/images/Specification/Paladin.png" alt=""><br><figcaption>▲ <b>[ 자료 12 ]</b> 보스 캐릭터의 컴포넌트</figcaption></figure>
+        <div>
+            <p>
+                &nbsp; 보스 캐릭터 또한 플레이어와 같이 전투가 가능한 오브젝트이기 때문에 플레이어를 제작하면서<br>
+                미리 만들어 두었던 클래스를 재활용하여 제작하게 되었습니다.<br>
+            </p><br>
+        </div>
+        <div>
+            <h2>7/11</h2>
+            <p>
+                &nbsp; 개발 중인 게임의 장르적인 재미를 위해 플레이어가 상대하게 될 보스에게 보다 다양한 행동 패턴들을<br>
+                부여하는 것을 목표로 1차적으로 보스에게 애니메이션을 적용 시켰습니다.
+            </p>
+        </div><br>
+        <figure><img src="assets/images/Specification/PaladinAnimator.png" alt=""><br><figcaption>▲ <b>[ 자료 13 ]</b> 보스 캐릭터의 애니메이션을 제어하는 화면</figcaption></figure>
+        <footer class="footer"></footer>
+    </div>
+    <div class="context page7">
+        <div>
+            <h2>7/12 ~ 7/14</h2>
+            <p>
+                본격적으로 보스 캐릭터의 공격 패턴을 구현하기 시작했습니다. 플레이어와 마찬가지로 대리자와 람다 식,<br>
+                코루틴을 통해서 구현이 되어있습니다.
+            </p>
+        </div>
+        <figure><img src="assets/images/Specification/PaladinThink.png" alt=""><br><figcaption>▲ <b>[ 자료 14 ]</b> 보스 캐릭터의 행동 패턴을 구현하는 코드</figcaption></figure>
+        <div class="clearfix">
+            <figure><img src="assets/images/Specification/Attack.gif" alt=""><figcaption>▲ <b>[ 자료 15 ]</b> 보스 캐릭터의 일반 공격</figcaption></figure>
+            <figure><img src="assets/images/Specification/Magic.gif" alt=""><figcaption>▲ <b>[ 자료 16 ]</b> 보스 캐릭터의 마법 공격</figcaption></figure>
+        </div>
+        <figure><img src="assets/images/Specification/Kick.gif" alt=""><figcaption>▲ <b>[ 자료 17 ]</b> 보스 캐릭터의 근접 공격</figcaption></figure>
+        <footer class="footer"></footer>
+    </div>
+    <div class="context page8">
+        <div>
+            <h1>2주차 개발 진행 내용</h1>
+            <h3> - 보스 캐릭터와 플레이어간의 전투의 구현 (7/11 ~ 7/14)</h3>
+            <div class="clearfix"></div>
+            <h2>7/11</h2>
+            <p>
+                &nbsp; 게임 전투를 구현함에 있어 "충돌 처리와 데미지 계산을 무기와 캐릭터 어느 쪽에서 진행해야 좋을까" 와 같은<br>
+                부분에서 많은 고민이 있었습니다.<br>
+                &nbsp; 처음에는 플레이어와 같이 전투 가능한 오브젝트들에서 직접 처리하게 하였지만, 애니메이션을 취해도<br>
+                충돌체가 애니메이션을 따라가지 않고 그 자리에 그대로 있는다는 문제가 발생했습니다.
+            </p>
+        </div><br>
+        <figure><img src="assets/images/Specification/Roll.gif" alt=""><br><figcaption>▲ <b>[ 자료 18 ]</b> 애니메이션 출력 중에도 가만히 있는 Capsule Collider</figcaption></figure><br>
+        <div>
+            <p>
+                &nbsp; rig 되어있는 오브젝트에 직접 충돌체를 설정하는 방법으로 이 문제를 해결하게 되었습니다. <br>
+                &nbsp; 다만 이렇게 구현을 할 경우 플레이어 오브젝트에서 직접 충돌처리 하는 것이 아닌, 그 하위의 충돌체가<br>
+                설정되어있는 오브젝트를 찾아 충돌처리를 진행해야하여 플레이어 쪽에서 충돌 처리를 구현하게되면<br>
+                관리하기가 불편하다는 문제가 발생했습니다.<br><br>
+                &nbsp; 그래서 무기 부분을 별도의 오브젝트로 분리하여 Prefab으로 만든 후, 무기에 컴포넌트를 설정하여<br>
+                무기 쪽에서 충돌 처리를 진행하는 방식으로 구현하였습니다.
+            </p>
+        </div>
+        <footer class="footer"></footer>
+    </div>
+    <div class="context page9">
+        <!--figure><img src="assets/images/Specification/PlayerWeapon.png" alt=""><br><figcaption>▲ <b>[ 자료 19 ]</b> 플레이어의 무기 오브젝트</figcaption></figure><br-->
+        <div>            
+            <figure><img src="assets/images/Specification/PlayerWeapon.png" alt=""><figcaption>▲ <b>[ 자료 19  ]</b> 플레이어의 무기 오브젝트</figcaption></figure>
+            <figure><img src="assets/images/Specification/WeaponComponent.png" alt=""><figcaption>▲ <b>[ 자료 20 ]</b> 플레이어 무기에 설정된<br>컴포넌트</figcaption></figure><br>
+            <div class="clearfix"></div>
+            <h2>7/12</h2>
+            <p>
+                &nbsp; 공격 애니메이션을 출력하는 도중에 무기 오브젝트의 충돌체가 무기 소유자 자신과 충돌하여 충돌 처리가<br>
+                일어나는 버그가 발생했습니다. Layer를 활용하여 충돌이 일어나지 않게 할 수도 있지만, 보다 근본적인<br>
+                방법으로 해결하기 위해서 게임이 시작했을 때 자신의 최상위 오브젝트의 정보를 받아온 후, 충돌이 일어난<br>
+                오브젝트의 최상위 오브젝트와 같다면 충돌 처리를 하지 않고 넘겨버리는 식으로 버그를 수정하였습니다.
+            </p>
+            <h2>7/13</h2>
+            <p>
+                &nbsp; 전투를 통해 상호간에 데미지를 입히는 것을 구현하였습니다. 체력과 관련한 변수를 public 형태로<br>
+                선언해두어 직접 접근해 처리할 수 도 있지만, 이 경우 체력이 변화하였을 때 발생하는, 예를 들어 <br>
+                체력 회복 이펙트나 데미지를 입었을 때의 연출 등을 일일히 체력이 바뀌는 상황에서 같이 처리하게<br>
+                해주어야해 관리가 힘들어진다는 점과 보안에 관련한 부분에 있어서도 취약해진다는 점이 단점으로<br>
+                다가왔습니다. <br>
+                &nbsp; 그렇기에 체력과 관련한 변수 자체는 외부에서 접근할 수 없도록 막아두고, 메소드를 통해서만<br>
+                접근할 수 있도록 하였으며, 플레이어와 보스 캐릭터가 공통적으로 사용할 수 있도록 부모 컴포넌트에서<br>
+                선언이 되어있습니다.
+            </p>
+        </div>
+        <footer class="footer"></footer>
+    </div>
+    <div class="context page10">
+        <br>
+        <figure><img src="assets/images/Specification/DamageProcess.png" alt=""><figcaption>▲ <b>[ 자료 21 ]</b> 적과 충돌하였을 때 적에게 데미지를 입히는 코드</figcaption></figure><br>
+        <div>
+            <h2>7/14</h2>
+            <p>
+                &nbsp; 플레이어, 혹은 보스 캐릭터가 사망했을 경우 발생되는 여러 상황을 구현하였습니다. <br>
+                &nbsp; 기본적으로 체력이 변화되는 과정에서 체력이 0 이하로 떨어지면 자동으로 캐릭터의 사망과 관련한 <br>
+                메소드를 실행하게 구현하였습니다만, 적과 플레이어 각각이 사망하였을 경우 발생될 상황이 다르기 때문에<br>
+                각각의 컴포넌트에서 메소드를 오버라이드 하여 그 자세한 내용을 구현하였습니다. <br>
+                &nbsp; 플레이어가 사망했을 경우에는 게임오버 신으로, 보스 캐릭터가 사망했을 경우에는 다음 스테이지로<br>
+                방식으로 구현되어있습니다. 또한, 데미지를 입고 입히는 과정에서 일방적으로 메소드를 호출할 뿐만 아니라,<br>
+                대상이 사망했는지, 회복했는지, 데미지를 입고 버텼는지 등의 정보를 반환하여, 공격자 측에서도 확인할 수<br>
+                있도록 구현하였습니다.
+            </p>
+            <div class="clearfix"></div>
+        </div><br>
+        <figure><img src="assets/images/Specification/Damage.png" alt=""><br><br><figcaption>▲ <b>[ 자료 22 ]</b> 데미지를 처리하는 과정에서 자동으로 사망 처리하는 코드 </figcaption></figure><br>
+        <footer class="footer"></footer>
+    </div>
+    <div class="context page11">
+        <div>
+            <h1>마무리 개발 내용</h1>
+            <h3>(7/17 ~ 7/18)</h3>
+            <div class="clearfix"></div>
+            <h2>7/17</h2>
+            <p>
+                &nbsp; 코드를 작성하다 보면 "특정한 코드를 일정 시간 뒤에 자동으로 실행 시킬 수 있게 하는 기능" 이 필요한<br>
+                경우가 있습니다. 예를 들어 데미지를 입은 후 일정 시간 동안 데미지를 입지 않는 상태가 되었다가 다시<br>
+                데미지를 입을 수 있는 상태로 돌아오는 경우 등이 있을텐데, 이런 상황에 대비하여 Unity의 기본 API에서는<br>
+                Invoke 라는 메소드를 지원하고 있습니다. <br>
+                하지만, Invoke 메소드에는 몇 가지 단점이 있습니다. 첫 번째로 매개변수를 전달할 수 없다는 것과 두 번째로<br>
+                게임의 성능적인 면에서 그다지 좋지 못하다는 점, 그리고 실행시킬 메소드를 미리 만들어 두어야하며,  <br>
+                그 메소드의 이름을 String 형태로 전달해야한다는 점 등이 있습니다. 특히 위에서 예시로 들었던 상황처럼 <br>
+                제한된 상황에서만 사용되는 메소드들을 하나 하나 전부 만들어 둔다면, 메소드들이 지나치게 많아지게 되며, <br>
+                이는 향후 게임의 유지 보수를 진행할 때, 메소드를 관리하는 측면에서 좋지 못한 선택이라고 생각합니다. <br>
+                &nbsp; 그렇기에 이를 해결하고자 Corutine과 Action 대리자를 활용하여 필요할 때 바로 익명 메소드를 인자로<br>
+                넘겨주어 Invoke의 기능을 수행할 수 있는 메소드를 만들었습니다. 하지만, 이렇게 구현을 하니 각각의<br>
+                Corutine을 실행시킬 때마다 Corutine 인스턴스가 생성되어 Unity Editor 상에서도 확인 할 수 있을 만큼 <br>
+                심각한 성능저하가 나타났습니다. <br>
+                &nbsp; 성능 저하 문제를 해결하기 위해 다른 방법을 고민하게 되었고, Multithreading을 통해 이를 구현하는것으로<br>
+                해결할 수 있었지만, Main 이외의 Thread에서 Unity의 API에 접근할 수 없게 되어있었기에 Queue를<br>
+                활용해서 인자로 전달 받은 Action 대리자를 지정된 시간 동안 대기한 후에 Queue에 push 하여<br>
+                Update 문에서 이를 pop 시키는 방식으로 이를 구현 할 수 있었습니다.
+            </p><br>
+        </div>
+        <figure><img src="assets/images/Specification/Use.png" alt=""><br><br><figcaption>▲ <b>[ 자료 23 ]</b> 메소드의 구조와 그 사용 </figcaption></figure><br>
+        <footer class="footer"></footer>
+    </div>
+    <div class="context page12">
+        <div>
+            <h2>7/18</h2>
+            <p>
+                UniRx를 활용하여 보스 캐릭터의 코드 최적화를 진행하였습니다.<br>
+                &nbsp; 7/17, Main 이외의 Thread에서 Unity의 API에 접근할 수 없는 문제를 해결하기 위해 자료를 찾아보던 중<br>
+                UniRx라는 기술을 접하게 되었습니다. UniRx는 "Functional Reactive br Programming(FRP) 를<br>
+                C# 에 사용할 수 있게 만든 .Net Reactive Extensions 를 일본인인 <a href="https://github.com/neuecc">@neuecc</a>가 Unity 전용으로<br>
+                최적화 하여 공개한 라이브러리 이다.[입니다.]" <a href="#cmt1">[1]</a> 간단하게 이야기 하면, 지속적으로 변수 등을<br>
+                관찰(Observe)하면서 값의 변화나 이벤트의 발생들을 감지해 바로 처리할 수 있도록 하는 기능입니다.<br>
+                &nbsp; 이를 통해 보스 캐릭터가가 데미지를 입었을 때 발생되는 이벤트나, 체력이 일정 비율 이하로 떨어졌을 경우<br>
+                패턴을 변화시키는 이벤트 등을 구현할 때 그 조건을 지속적으로 Update문에서 체크하는것이 아니라, <br>
+                게임 시작시에 한 번 등록(Subscribe)한 후 값이 변화했을 때나 조건을 충족했을 때만 등록된 메소드를<br>
+                호출하는 식으로 코드를 간결하게 만들 수 있었습니다.
+            </p>
+        </div>
+        <figure><img src="assets/images/Specification/UniRx.png" alt=""><br><br><figcaption>▲ <b>[ 자료 24 ]</b> 체력이 변화하였을 때의 피격처리 및 체력 관련 UI 변화를<br>UniRx를 활용하여 자동으로 처리하게하는 코드</figcaption></figure>
+        <figure><img src="assets/images/Specification/PowerUp.gif" alt=""><br><br><figcaption>▲ <b>[ 자료 25 ]</b> 실제로 인게임에 적용된 모습</figcaption></figure><br>
+        <footer class="footer"><span id = "cmt1">[1] "[UniRx 입문 강좌 1] 개념 및 기본 사용법 소개", 아마군의 Dev로그, 2023. 07. 19. 접속,
+            <a href="https://skuld2000.tistory.com/31">https://skuld2000.tistory.com/31</a></span>
+        </footer>
+    </div>
+    <div class="context page13">
+        <div>
+            <h2>참고 문헌</h2>
+            <p>
+                "[UniRx 입문 강좌 1] 개념 및 기본 사용법 소개", 아마군의 Dev로그, 2023. 07. 19. 접속,
+                <a href="https://skuld2000.tistory.com/31">https://skuld2000.tistory.com/31.</a><br><br>
+                "[UniRx 입문 강좌 2] UniRx 의 핵심, Subject 와 Observable 사용 방법", 아마군의 Dev로그,<br>
+                2023. 07. 19. 접속, <a href="https://skuld2000.tistory.com/33">https://skuld2000.tistory.com/33.</a><br><br>
+                "[UniRx 입문 강좌 4] Operator 활용(1) - Where & Select & SelectMany 사용법", 아마군의 Dev로그,<br>
+                2023. 07. 19. 접속, <a href="https://skuld2000.tistory.com/39">https://skuld2000.tistory.com/39.</a><br><br>
+                "[Unity] 유니티에서 Thread 사용 - UI 데이터 처리", TISTORY, 2023. 07. 19. 접속,
+                <a href="https://timeboxstory.tistory.com/24">https://timeboxstory.tistory.com/24.</a><br><br>
+                "can only be called from the main thread.Constructors and field ...", TISTORY, 2023. 07. 19. <br>접속,
+                <a href="https://drehzr.tistory.com/1555">https://drehzr.tistory.com/1555.</a>
+            </p>
+        </div>
+        <footer class="footer"></footer>
+    </div>
+</body>
