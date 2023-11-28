@@ -81,13 +81,57 @@ var PageMove = async (idx) =>
             });
             //#endregion
             break;
-        default:
-            UnloadElements(idx, idx % 4);
+        case 3:
+            var text = Pages[idx].querySelector(".text");
+            var line = Pages[idx].querySelector(".banner");
+            var imgs = Pages[idx].querySelectorAll(".img");
+            var texts = ['굿', '즈', ' ', '획','득']; 
+            text.innerHTML = "";
+
+            //Unload=====================================================
+            line.style.transition = 'none';
+            line.style.opacity = `0%`;
+            line.style.top = `${Number(line.style.top.slice(0, -1)) - 100}%`
+            imgs.forEach(v => {
+                v.style.transition = 'none';
+                v.style.opacity = `0%`;
+                v.style.left = `${Number(v.style.left.slice(0, -1)) + 100}%`
+            });
+
             await delay(500);
-            Pages[idx].style.left = '0%'; 
+            Pages[idx].style.left = '0%';
+            await delay(500);
+
+            //Load========================================================
+            line.style.transition = 'all 1s';
+            line.style.top = '0%';
+            line.style.opacity = '100%';
+
+            await delay(100);
+
+            for (let i = 0; i < imgs.length; i++) {
+                const img = imgs[i];
+                
+                img.style.transition = 'all 1.5s';
+                img.style.opacity = `100%`;
+                img.style.left = `${Number(img.style.left.slice(0, -1)) - 100}%`
+                await delay(100);
+            }
             await delay(750);
-            LoadElements(idx, idx % 4);
-            break;
+
+            for (let i = 0; i < texts.length; i++) {
+                const t = texts[i];
+                await delay(150);
+                text.innerHTML = text.innerHTML + t;
+            }            
+        break;
+        default:
+        UnloadElements(idx, idx % 4);
+        await delay(500);
+        Pages[idx].style.left = '0%'; 
+        await delay(750);
+        LoadElements(idx, idx % 4);
+        break;
     }
     IndexNow = idx;
     IsOnAnimation = false;
@@ -162,13 +206,11 @@ async function LoadElements(PageIndex, dir)
             elements.forEach(element => {
             element.style.left = `${Number(element.style.left.slice(0, -1)) - 200}%`;
             element.style.opacity = `100%`;
-            console.log(element.style.left)
         });
         case 3:  
             elements.forEach(element => {
             element.style.left = `${Number(element.style.left.slice(0, -1)) + 100}%`;
             element.style.opacity = `100%`;
-            console.log(element.style.left)
         });
     break;
     }
