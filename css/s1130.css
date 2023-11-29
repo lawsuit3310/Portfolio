@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "Esamanru Bold";
+    src: url(assets/fonts/esamanru_TTF/esamanru\ Bold.ttf);}
+@font-face {
+font-family: "Esamanru Medium";
+src: url(assets/fonts/esamanru_TTF/esamanru\ Medium.ttf);}
+@font-face {
+font-family: "Esamanru Light";
+src: url(assets/fonts/esamanru_TTF/esamanru\ Light.ttf);}
+@font-face {
+font-family: "1000Light";
+src: url(assets/fonts/Gyeong-Gi/Title_Light.otf);}
+@font-face {
+font-family: "1000Medium";
+src: url(assets/fonts/Gyeong-Gi/Title_Medium.otf);}
+
+* { font-family: "1000Light"; box-sizing: border-box; margin: 0 auto; padding: 0;}
+
+.clearfix::before, .clearfix::after { display: block; clear: both; content: '';}
+ul > li {list-style: none;}
+
+div.a {width: 100px; height: 100%; background-color: black;}
+div.b {width: 100px; background-color: red;}
+
+.wrapper {width: 85%; height: 100%; text-align: center; overflow: hidden; position: fixed; left: 7.5%;}
+
+.bgVideo {display: none; width: 100%; position: relative; top: -60%; z-index: -2;}
+.bgMococo {display: none; width: 100%; position: absolute; top: -60%; z-index: -1;}
+
+.usermenu {width: 100%; height: 5%; position: absolute; z-index: 100;}
+.usermenu * {float: left; position: relative;}
+.usermenu div {width: 100%; height: 100%; background-color: #222;}
+.usermenu ul {top : -50%;}    
+
+.title {width: 100%; height: 100%; position: absolute;  background-image: url(assets/images/1130/SelfCam.jpg);
+background-size: 65%; background-position-y: 100%; background-repeat: no-repeat; opacity: 0;}
+.title * {position: relative; float: right; width: 100%; transition: all 1s;}
+.title div.menu {width: 35%; height: 100%; background-color: #0a0b0a; padding: 20px 4%; vertical-align: middle;}
+.title div.menu ul {height: 98%; padding-top: 80%;}
+.title div.menu ul li {height: 20%; margin-bottom: 12%; background-color: none;}
+.title div.menu .profile span { height: 100%;  font-size: 140%; text-align: right; color: white; padding-top: 40%;}
+.title div.menu .logo {width: 100%; height: 100%; background-position: 20% 50%; background-size: 100%; background-image: url(assets/images/1130/gstarnewlogo.png);
+background-repeat: no-repeat; filter: drop-shadow(0px 10px #aaa);}
+.title .menu a.startBtn {position: relative; width: 100%; height: 20%; text-align: center; text-decoration: none; transition: all 0.2s; font-size: 6em; font-family: "1000Medium";
+color: white; text-shadow: -5px 0px 3px #E45289, 0px 5px 3px #E45289, 5px 0px 3px #E45289, 0px -5px  #E45289;  filter: drop-shadow(0px 10px #666);  transition: "letter-spacing" 0.2s;}
+.title .menu a.startBtn:hover {font-size: 7em; letter-spacing: 0.05em;}
+.title .menu > a {text-decoration: none; width: 100%; text-align: right; color: white; margin-right: 2%; transition: all 0.4s; margin-bottom: 5%;}
+.title .menu > a:hover {font-size: 1.01em; letter-spacing: 0.1em;}
+
+.content {width: 100%; height: 100%; background-color: #222;  position: absolute; left : 150%; color: black; transition: all 0.8s;}
+.content * { position: relative; float : left; transition : all 1s; }
+.content > div { height: 100%;}
+
+.content.page1 .arriveImage {width: 60%; background-image: url(assets/images/1130/Fusan.jpg); background-position: 50% 65%; background-repeat: no-repeat; background-size: 100%;}
+.content.page1 .arriveText {width: 40%; background-color: #0a0b0a;}
+.content.page1 .arriveText ul {width: 100%; height: 40%; padding: 0; color: white; }
+.content.page1 .arriveText li {width: 100%; height: 45%; background-color: none; padding-top: 15%; margin-bottom: 2.5%; font-size: 400%; font-family: "1000Medium"; }
+.content.page1 .arriveText .img {width: 70%; height: 50%; background-size: 100%; margin-left: 15%; margin-top: 15%; background-image: url(assets/images/1130/Ticket.jpg); background-color: white;}
+
+.content.page2 {padding: 1%;}
+.content.page2 .waiting { width: 65%; height: 100%; margin-right: 1%; background-image: url(assets/images/1130/GstarWaiting2.jpg);}
+.content.page2 .waiting.y2023 { background-image: url(assets/images/1130/GstarWaiting1.jpg);}
+.content.page2 .waitingText {width: 31%; height: 20%; margin-top: 47%; padding-right: 2%; float: right;}
+.content.page2 .waitingText ul {width: 100%; height: 100%; color: whitesmoke; vertical-align: bottom;}
+.content.page2 .waitingText li {width: 100%; height: 50%; background-color: none; font-size: 350%; font-family: "1000Medium"; }
+
+.content.page3 .webzenImg {width: 70%; height: 65%; margin-top : 15%; margin-left: 30%; position: absolute; background-image: url(assets/images/1130/WebzenAlpha.png);
+background-repeat: no-repeat; background-size: cover; background-position-x: 25%; filter: drop-shadow(10px 30px 1px #0a0b0a); }
+.content.page3 .webzenImg.idx1 {background-image: url(assets/images/1130/WebzenDoll.png);}
+.content.page3 .webzenImg.idx2 {background-image: url(assets/images/1130/WebzenTerbis.png);}
+
+.content.page3 div.logo { width: 40%; height: 40%; background-image: url(assets/images/1130/WebzenLogo.png); position: absolute; background-size: cover;
+left:-5%; bottom: 40%;}
+.content.page3 div.text {font-size: 400%; vertical-align: middle; height: 60%; width: 32%; text-align: center; }
+.content.page3 div.text * {width: 100%; text-decoration: none; display: block; padding: 0;}
+.content.page3 div.text ul{height: 30%; margin-top: 130%; color: white; padding-left: 10%;}
+.content.page3 div.text li{height: 50%; vertical-align: bottom; left : -7%}
+
+.content.page3 div.banner {height: 5%; width: 100%; background-color: whitesmoke; position: absolute; top: 2.5%;}
+.content.page3 div.banner.idx2 {top : 92.5%; }
+
+.content.page4 * {width: 100%; text-align: inherit; vertical-align: inherit;}
+.content.page4 div.text {width: 30%; font-size: 500%; text-align: center; vertical-align: middle;
+color: white;  font-family: '1000Medium'; margin-top: 32%;}
+.content.page4 div.poster {width: 22%; height: 42.5%; background-image: url(assets/images/1130/Poster.jpg);
+background-size: 100%; background-position: 25% 50%; position: absolute; margin-left: 47.5%; margin-top: 2.5%;}
+.content.page4 div.books {width: 25%; height: 42.5%; background-image: url(assets/images/1130/Books.jpg);
+background-size: 280%; background-position: 25% 50%; position: absolute; margin-left: 72.5%; margin-top: 2.5%;}
+.content.page4 div.booth { width: 50%; height: 50%; background-image: url(assets/images/1130/WebzenStamp.png);
+position: absolute; background-size: cover; margin-left: 47.5%; margin-top: 32%;}
+.content.page4 div.banner{ width: 1%; height: 100%; background-color: whitesmoke;}
+
+.content.page5 div.imgGroup {width: 100%; height: 100%;}
+/* .content.page5 div.webzenImg { width: 25%; height: 60%;
+background-size: cover; margin-left: 38%; position: absolute; margin-top: 20%; }
+.page5 div.webzenImg.selected {width: 30%; height: 70%; z-index: 2; top: -2.5%;}
+.page5 div.idx1 {background-image: url(assets/images/1130/epsilon.jpg)}
+.page5 div.idx2 {transform: rotate(22.5deg); left: 15%; top : 15%; background-image: url(assets/images/1130/epsilon_2.jpg)}
+.page5 div.idx3 {transform: rotate(45deg); left : 30%; top: 30%; background-image: url(assets/images/1130/Alpha.jpg)}
+.page5 div.idx4 {transform: rotate(-22.5deg); left: -15%; top : 15%; background-image: url(assets/images/1130/Enqueter.jpg)}
+.page5 div.idx5 {transform: rotate(-45deg); left : -30%; top: 30%; background-image: url(assets/images/1130/PhotoZone.jpg)}
+.page5 div.idx6 {display: none; transform: rotate(45deg);} */
+
+.content.page5 * {width: 100%; height: 100%; color: inherit; float: left;}
+.content.page5 object.stove {width : 55% ; height : 100%; }
+.content.page5 object.GreatToyShowdown {width : 45% ; height : 38%; margin-top: 12%;}
+.content.page5 div.text {width: 45%; height: 10%; font-size: 400%; margin-top: 6%; color: whitesmoke; font-family: '1000Medium';}
+.content.page5 div.annotation { width: 45%; margin-top: 10%; color: white; text-align: left; padding-left: 2%; font-size: 140%; letter-spacing: 0.2em;}
+
+.content.page6 * { width: 100%; height: 100%; float: right;}
+.content.page6 object.dongseo {width: 60%; margin-right: 2.5%;}
+.content.page6 div.text {width: 30%; height: 40%;}
+.content.page6 div.dongseoImg {width: 37.5%; height: 60%; background-image: url(assets/images/1130/dongseo.jpg); background-size: 100%; background-position-y: 35%;}

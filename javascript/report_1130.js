@@ -1,5 +1,8 @@
 Pages = []
+SlideImgs = [];
 TempElements = [];
+CircleSinParam = [];
+CircleCosParam = [];
 var IndexNow = 0;
 var Title = document.querySelector(".title");
 var IsOnAnimation = false;
@@ -130,6 +133,7 @@ var PageMove = async (idx) =>
             var video = Pages[idx].querySelector(".GreatToyShowdown");
             var annotation = Pages[idx].querySelector(".annotation");
             var texts = Pages[idx].querySelectorAll("li");
+            var line = Pages[idx].querySelector(".banner");
             var originalText = annotation.innerHTML.split('');
 
             //Unload
@@ -144,6 +148,9 @@ var PageMove = async (idx) =>
                 text.style.opacity = `0%`;
                 text.style.left = `${Number(text.style.left.slice(0, -1)) + 100}%`
             });
+            line.style.transition = 'none';
+            line.style.opacity = `0%`;
+            line.style.left = `${Number(line.style.left.slice(0, -1)) + 100}%`
 
             await delay(500);
             Pages[idx].style.left = '0%';
@@ -152,6 +159,12 @@ var PageMove = async (idx) =>
             webPg.style.transition = 'all 2s';
             webPg.style.opacity = `100%`;
             await delay(100);
+            
+            line.style.transition = 'all 1s';
+            line.style.left = '0%';
+            line.style.opacity = '100%';
+
+            await delay(150);
 
             video.style.transition = 'all 1.5s';
             video.style.opacity = `100%`;
@@ -163,7 +176,7 @@ var PageMove = async (idx) =>
                 text.style.transition = 'all 1.5s';
                 text.style.opacity = `100%`;
                 text.style.left = `${Number(text.style.left.slice(0, -1)) - 100}%`
-                await delay(150);
+                await delay(250);
             }          
             for (let i = 0; i < originalText.length; i++) {
                 const t = originalText[i];
@@ -172,12 +185,64 @@ var PageMove = async (idx) =>
             }
 
         break;
-        default:
-        UnloadElements(idx, idx % 4);
+        case 6:
+
+        var imgs = Pages[idx].querySelectorAll("div.img");
+        var texts = Pages[idx].querySelectorAll("li");
+        var videoBox = Pages[idx].querySelector("div.videoBox");
+
+        imgs.forEach(img => {
+            img.style.transition = 'none';
+            img.style.top = '100%'
+            img.style.opacity = "0%";
+            img.style.transition = 'opacity 1.5s';
+        });
+        texts.forEach(text => {
+            text.style.transition = 'none';
+            text.style.left = '-100%'
+            text.style.opacity = "0%";
+        });
+
+        videoBox.style.transition = 'none';
+        videoBox.style.left = '100%';
+        videoBox.style.opacity = "0%";
+
         await delay(500);
         Pages[idx].style.left = '0%'; 
         await delay(750);
-        LoadElements(idx, idx % 4);
+
+        for (let i = 0; i < imgs.length; i++) {
+            var v = imgs.length - i;
+            const img = imgs[v - 1];
+            
+            img.style.opacity = "100%";
+            CircleMove(img, 4, 0, 157 - i * 10, 2.5, 35 - i * 12.5, 110)
+            await delay(250)
+        }
+        await delay(100);
+        for (let i = 0; i < texts.length; i++) {
+            const text = texts[i];
+            text.style.transition = 'all 1s';
+            text.style.left = '0%'
+            text.style.opacity = "100%";
+            await delay(200);
+        }
+
+        videoBox.style.transition = 'all 1s';
+        videoBox.style.left = '0%';
+        videoBox.style.opacity = "100%";
+        await delay(200);
+
+        break;
+        case 7:
+            Pages[idx].style.left = '0%'; 
+        break;
+        default:
+            UnloadElements(idx, idx % 4);
+            await delay(500);
+            Pages[idx].style.left = '0%'; 
+            await delay(750);
+            LoadElements(idx, idx % 4);
         break;
     }
     IndexNow = idx;
@@ -200,7 +265,14 @@ function Lerp(min, max, f)
     var v = max - min > min - max ? max - min : min - max;
     return v * f + min;
 }
-
+async function SlideNext(idxNow = 0) {
+    var v = idxNow-1 < 0 ? SlideImgs.length - 1 : idxNow - 1;
+    SlideImgs[v].style.top = "-200%";
+    SlideImgs[idxNow].style.top = "0%";
+    console.log(v);
+    await delay(4000);
+    SlideNext((idxNow + 1) % SlideImgs.length);
+}
 function UnloadElements(PageIndex, dir)
 {   
     var elements = Pages[PageIndex].querySelectorAll('*');
@@ -262,7 +334,30 @@ async function LoadElements(PageIndex, dir)
     break;
     }
 }
+
+async function CircleMove(target, radius = 2, Min = 0, Max = CircleCosParam.length, spd = 4, posX = 40, posY = 20)
+{
+    var v = target.style.transition;
+    //target.style.transition = 'none';
+    for (let rad = Min; rad < Max; rad += spd) {
+        const sin = CircleSinParam[rad];
+        const cos = CircleCosParam[rad];
+        
+        target.style.transform = `rotate(${(rad - 157) / 100}rad)`
+        target.style.top = `${posY - sin * radius * 16}%`;
+        target.style.left = `${posX - cos * radius * 9}%`;
+        console.log(rad);
+        await delay(10);   
+    }
+    target.transition = v;
+}
 // ==============================================
+
+for (let rad = 0; rad < Math.PI * 2 ; rad += 0.01)
+{
+    CircleSinParam.push(Math.sin(rad));
+    CircleCosParam.push(Math.cos(rad));
+}
 
 // 실제 진입점 ========================================================
 window.addEventListener("DOMContentLoaded", async (e) =>
@@ -273,6 +368,7 @@ window.addEventListener("DOMContentLoaded", async (e) =>
     //UserMenu = document.querySelector(".usermenu");
     DoriDori = document.querySelector(".bgVideo");
     StartButton = document.querySelector(".title a.startBtn");
+    SlideImgs = document.querySelectorAll(".page8 .img");
     titleElements = Title.querySelectorAll(".menu *");
     //================================================================
     
@@ -286,8 +382,6 @@ window.addEventListener("DOMContentLoaded", async (e) =>
     //         element.style.top = "20%";
     //     });
     // }); 
-
-
     titleElements.forEach(element => {
         element.style.top = "80%";
     });
@@ -305,6 +399,8 @@ window.addEventListener("DOMContentLoaded", async (e) =>
         element.style.top = "0%";
         await delay(200);
     }
+
+    SlideNext(0);
 
     StartButton.addEventListener("click", async () =>
     {
@@ -324,7 +420,6 @@ window.addEventListener("DOMContentLoaded", async (e) =>
                     break;
             }
         });
-
     });
     
     addEventListener('resize', (event) => {
@@ -344,5 +439,4 @@ window.addEventListener("DOMContentLoaded", async (e) =>
                 }
         });
       });
-    
 });
