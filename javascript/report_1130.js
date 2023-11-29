@@ -125,6 +125,53 @@ var PageMove = async (idx) =>
                 text.innerHTML = text.innerHTML + t;
             }            
         break;
+        case 4:
+            var webPg = Pages[idx].querySelector(".stove");
+            var video = Pages[idx].querySelector(".GreatToyShowdown");
+            var annotation = Pages[idx].querySelector(".annotation");
+            var texts = Pages[idx].querySelectorAll("li");
+            var originalText = annotation.innerHTML.split('');
+
+            //Unload
+            annotation.innerHTML = '';
+            webPg.style.transition = 'none';
+            webPg.style.opacity = `0%`;
+            video.style.transition = 'none';
+            video.style.opacity = `0%`;
+            video.style.left = `${Number(video.style.left.slice(0, -1)) + 100}%`
+            texts.forEach(text => {
+                text.style.transition = 'none';
+                text.style.opacity = `0%`;
+                text.style.left = `${Number(text.style.left.slice(0, -1)) + 100}%`
+            });
+
+            await delay(500);
+            Pages[idx].style.left = '0%';
+            await delay(500);
+
+            webPg.style.transition = 'all 2s';
+            webPg.style.opacity = `100%`;
+            await delay(100);
+
+            video.style.transition = 'all 1.5s';
+            video.style.opacity = `100%`;
+            video.style.left = `${Number(video.style.left.slice(0, -1)) - 100}%`
+            await delay(500);
+
+            for (let i = 0; i < texts.length; i++) {
+                const text = texts[i];
+                text.style.transition = 'all 1.5s';
+                text.style.opacity = `100%`;
+                text.style.left = `${Number(text.style.left.slice(0, -1)) - 100}%`
+                await delay(150);
+            }          
+            for (let i = 0; i < originalText.length; i++) {
+                const t = originalText[i];
+                annotation.innerHTML = annotation.innerHTML + t;
+                await delay(100);
+            }
+
+        break;
         default:
         UnloadElements(idx, idx % 4);
         await delay(500);
@@ -259,7 +306,6 @@ window.addEventListener("DOMContentLoaded", async (e) =>
         await delay(200);
     }
 
-
     StartButton.addEventListener("click", async () =>
     {
         PageMove(0);
@@ -278,6 +324,7 @@ window.addEventListener("DOMContentLoaded", async (e) =>
                     break;
             }
         });
+
     });
     
     addEventListener('resize', (event) => {
