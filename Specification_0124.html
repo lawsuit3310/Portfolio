@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발 일지</title>
+    <style>
+        @font-face {
+            font-family: "Esamanru Bold";
+            src: url(assets/fonts/esamanru_TTF/esamanru\ Bold.ttf);
+        }
+        @font-face {
+            font-family: "Esamanru Medium";
+            src: url(assets/fonts/esamanru_TTF/esamanru\ Medium.ttf);
+        }
+        @font-face {
+            font-family: "Esamanru Light";
+            src: url(assets/fonts/esamanru_TTF/esamanru\ Light.ttf);
+        }
+
+        * {font-family: "Esamanru Light"; color: inherit;}
+        :root{ --A4Height : 30.69cm; --mainColor : #43d7fc;}
+        table {border-collapse: collapse;}
+        tr, td, th { border : 1px solid black; padding : 0.8cm 1cm; box-sizing: border-box;}
+        .clearfix::before, .clearfix::after { display: block; clear: both; content: '';}
+        .context {width: 21cm; min-height: var(--A4Height); margin: 0 auto; box-sizing: border-box; 
+            position: relative; margin-bottom: 0.27cm;}
+        .header {width: inherit; height: 2.5cm; background-color: var(--mainColor); position: relative; padding: 0.8cm; box-sizing: border-box;}
+        .footer {width: inherit; height: 2.5cm; background-color: var(--mainColor); position: absolute; color: white; padding: 0.8cm; box-sizing: border-box; bottom: 0;}
+        .header h1 {text-align: center; vertical-align: center; height: 1cm; margin: 0; letter-spacing: 0.15cm;}
+
+        * a {text-decoration: none;}
+        * a:hover {text-decoration: underline;}
+
+        .page1 > span {position: absolute; right: 0; margin-top: 1cm; font-size: 0.6cm;}
+        .page1 > ul {border: 1px solid black; margin-top: 5cm; margin-left:1.5cm; width: 10cm; height: 13.5cm; box-sizing: border-box;}
+        .page1 ul div {font-size: 1cm; margin : 0.5cm 0;}
+        .page1 ul div.process {margin : 0.5cm 0; font-size: 0.5cm;}
+        .page1 > ul > li {height: 4cm; line-height: 1cm;}
+        .page1 > ul > li > ul > li {line-height: 1.5cm;}
+
+        .page2 h1 {margin: 1cm 0 0 1cm;}
+        .page2 h3 {float: right; margin-right: 2cm; font-weight: lighter; font-size: 0.6cm;}
+        
+        .page3 h1 {margin: 1cm 0 0 1cm;}
+        .page3 h3 {float: right; margin-right: 2cm; font-weight: lighter; font-size: 0.6cm;}
+        .page3 p {float : left; width: 95%; line-height: 1.5em; margin-left: 5%; }
+
+    </style>
+</head>
+<body>
+    <div class="context page1">
+        <header class="header"><h1>개발 일지</h1></header>
+        <span>2023366961&nbsp; 민기홍</span><footer class="footer"></footer>
+        <ul>
+            <div>목차</div>
+            <div class="process">개발 과정</div>
+            <li>1주차 ( 1/4 ~ 1/12 ) 개발 진행 내용
+                <ul>
+                    <li>게임의 턴 & 카드 시스템 개발</li>
+                    <li>적 캐릭터 관련 시스템 개발</li>
+                </ul>
+            </li>
+            <li>2주차 (1/12 ~ 1/19) 개발 진행 내용
+                <ul>
+                    <li>튜토리얼 시스템 개발</li>
+                    <li>게임에 UTS 적용</li>
+                </ul>
+            </li>
+            <li>마무리 (1/20 ~ 1/21)</li>
+        </ul>
+        <footer class="footer"></footer>
+    </div>
+    <div class="context page2">
+        <h1> 게임 개요</h1>
+        <h3> Merge 게임</h3>
+        <footer class="footer"></footer>
+    </div>
+    <div class="context page3">
+        <h1>1주차 개발 진행 내용</h1>
+        <h3> 게임 턴 시스템 개발 (1/4)</h3>
+        <p>
+            &nbsp;플레이어를 구현함에 있어 첫 번째로 고려했었던 사항은 Soullike 라는 장르의 핵심적 요소인<br>
+            "적과의 전투" 를 구현하기 위해 플레이어와 적이 동시에 가지는 여러 특성들, 예를 들어 체력과 같은<br>
+            스테이터스의 존재와 그것들을 변화시키는 여러 메소드 등을 이후 플레이어와 전투를 할 적을 개발하면서<br>
+            재활용할 수 있도록 하는 클래스를 설계하는 것이였습니다. <br>
+
+            &nbsp;또한 스테이터스와 같이 전투가 가능한 오브젝트들이 가지는 값들의 경우에는 따로 VO클래스를 만들어<br>
+            추후 DB와의 연동이 용이하도록 하였으며, Serializable 속성을 부여하여 UnityEditor에서 쉽게 <br>
+            관리할 수 있도록 하였습니다. <br>
+        </p>
+        <div class="clearfix"></div>
+        <footer class="footer"></footer>
+    </div>
+</body>
+</html>
