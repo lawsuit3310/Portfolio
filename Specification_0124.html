@@ -79,6 +79,25 @@
             padding-left: 2cm; box-sizing: border-box; margin-left: 0.5cm;}
         .page7 div.bear figure img {width: 75%; margin: 0 auto;}
         .page7 div.bear figure figcaption {margin-left: -1.2cm; text-align: center; font-size: 0.8em;}
+        .page7 ul {padding-left: 3cm; line-height: 1cm;}
+        .page7 > figure {width: 38%; margin: 0 auto; margin-top: 2.4cm;}
+        .page7 > figure > img {width: 100%;}
+        .page7 > figure > figcaption {width: 200%; text-align: left; margin-left: -1cm; }
+
+        .page8 p {line-height: 0.8cm;}
+        .page8 > figure {width: 38%; margin: 0 auto;}
+        .page8 > figure > img {width: 100%;}
+        .page8 > figure > figcaption {width: 200%; text-align: left; margin-left: -2cm; }
+        
+        .page9 > figure {width: 38%; margin: 0 auto;}
+        .page9 > figure > img {width: 100%;}
+        .page9 > figure > figcaption {text-align: center;}
+        .page9 ul {padding-left: 3cm; line-height: 1cm;}
+        
+        .page10 div.temp {padding-left: 1.6cm; }
+        .page10 div.temp figure {width: 44%; float: left; margin: 0; margin-right: 0.6cm;}
+        .page10 div.temp figure img{width: 100%;}
+        .page10 div.temp figure figcaption{width: 100%; text-align: center;}
     </style>
 </head>
 <body>
@@ -223,7 +242,7 @@
             &nbsp;그런 경우에 사용할 수 있도록 카드를 종류, 티어에 따라 분류하여 <br>
             한 곳에 정렬 할 수 있는 기능을 구현 하였습니다.
         </p>
-        <figure><img src="assets/images/0125/Dove.png" alt=""><figcaption><b>[ 자료 8 ] 레퍼런스로 사용된 게임 중 하나인 비둘기 키우기 ▲</b></figcaption></figure>   
+        <figure><img src="assets/images/0125/Dove.png" alt=""><figcaption><b>[ 자료 8 ] "정렬" 기능의 레퍼런스로 채용한 게임 "비둘기 키우기" ▲</b></figcaption></figure>   
         <div class="sort">
             <figure><img src="assets/images/0125/KeyVisual.png" alt=""><figcaption><b>▲ [ 자료 6 ] 정렬되지 않은 카드들</b></figcaption></figure>
             <figure><img src="assets/images/0125/Cards.png" alt=""><figcaption><b>▲ [ 자료 7 ] 정렬 된 후</b></figcaption></figure>
@@ -286,8 +305,92 @@
             <figure style="float: right; margin-right: 0.8cm; padding-left: 1cm;"><img style = "width: 82%;" src="assets/images/0125/BearShaded.png" alt=""><figcaption><b>[ 자료 11 ] ▲ UTS가 적용된 후의 모습</b></figcaption></figure>
         </div>
         <div class="clearfix"></div><br>
-        <h3>적 캐릭터에 UTS 적용(1/13)</h3>
+        <h3>게임에 " 유니티 짱 캐릭터 " 추가 (1/14)</h3>
+        <p>
+            &nbsp;중간 발표 때 교수님으로부터 캐릭터적인 요소를 추가해보라는 피드백을 수용하여 추가하게 되었습니다. <br>
+            유니티 짱 캐릭터의 기본적인 동작은 다음과 같습니다. 
+        </p>
+        <div class="clearfix"></div>
+        <ul>
+            <li>플레이어가 카메라를 조작하여 이동 시키는 것을 따라 같이 이동</li>
+            <li>이동하지 않고 대기하고 있는 상태인 경우, 머리 위에 텍스트 등을 출력</li>
+        </ul>
+        <p>
+            &nbsp;당일에는 기본적인 이동 로직 작성 및 UTS를 적용시키는 작업을 진행하였습니다.
+        </p>
+        <figure><img src="assets/images/0125/UnityChan.png" alt=""><figcaption><b>[ 자료 12 ] ▲ UTS 적용 전 이미지 (좌), 적용 후 이미지 (우)</b></figcaption></figure>
         <footer class="footer"></footer>
+    </div>
+    <div class="context page8">
+        <h1>2주차 개발 진행 내용</h1>
+        <h3>애니메이션 적용 (1/15)</h3>
+        <div class="clearfix"></div>
+        <p>
+            &nbsp;유니티 짱 캐릭터와 카메라와의 거리에 따라 멀 수록 더 빨리 이동하고, 가까워지면 더 천천히 이동하는 방식으로<br>
+            캐릭터의 이동을 구현하였습니다. 이때, 이동 속도에 따라 자연스럽게 애니메이션이 변화할 수 있도록<br>
+            Blending Tree를 이용하여 애니메이션을 적용시키는 작업을 진행하였습니다.<br>
+        </p>
+        <figure><img src="assets/images/0125/Blending.png" alt=""><figcaption><b>[ 자료 13 ] ▲ Blending Tree를 사용하여 애니메이션을 제어하는 이미지</b></figcaption></figure>
+        <br><br><br>
+        <h3>도감 시스템 구현 (1/15)</h3>
+        <p>
+            이전에 yaml 파일을 활용하여 구현하였던 시스템을 바탕으로 도감 시스템을 구현하였습니다.
+        </p><figure><img src="assets/images/0125/Dictionary.png" alt="">
+            <figcaption style="width: 100%; text-align: center; margin-left: 0;"><b>[ 자료 14 ] ▲ 게임에 적용된 도감 화면</b></figcaption></figure>
+        <div class="clearfix"></div>
+        <footer class="footer"></footer>
+    </div>
+    <div class="context page9">
+        <h1>2주차 개발 진행 내용</h1>
+        <h3>튜토리얼 구현 (1/16 ~ 17)</h3>
+        <p>
+            &nbsp;게임의 기본적인 진행방식을 알리기 위한 튜토리얼을 제작하였습니다. <br>
+            이때, 유니티 짱 캐릭터를 재활용하여 해당 캐릭터가 튜토리얼을 진행하는 방식으로 제작하였습니다. <br>
+            <br>
+            UniTask를 활용하여 비동기 방식으로 제작하였습니다.
+        </p>
+        <div class="clearfix"></div>
+        <ul>
+            <li>화면을 클릭하거나 텍스트가 전부 출력된 1초 뒤에 다음 대사로 넘어가게 됩니다.</li>
+            <li>텍스트를 출력할 때 UniTask를 활용하여 텍스트 타이핑 애니메이션을 구현하여 적용시켰습니다.</li>
+            <li>만약 유니티 짱 캐릭터가 움직이고 있는 상태라면 움직임이 멎을 때까지 대기한 후 다음 대사를<br>
+                출력합니다. </li>
+            <li>튜토리얼 내에서 플레이어로 하여금 어느 특정한 버튼을 누르게 하고자 하여, "해당 버튼을 눌러야<br>
+                다음 내용으로 진행되는 상황" 의 경우에도 이를 통해 구현하였습니다.</li>
+        </ul>
+        <h3>카드 병합 관련 코드 리팩토링 및 디버깅 (1/18)</h3>
+        <p>
+            &nbsp;몇몇 버그들의 디버깅을 진행하면서, 카드를 Merge 시키는 기능과 관련한 코드가 지나치게 난잡해져 해당하는<br>
+            부분을 리팩토링 하는 작업을 진행하였습니다. 
+        </p>
+        <div class="clearfix"></div><br><br>
+        <figure><img src="assets/images/0125/tutorialProcessing.png" alt=""><figcaption><b>[ 자료 15 ] ▲ 튜토리얼 진행 중인 이미지</b></figcaption></figure>
+        <footer class="footer"></footer>
+    </div>
+    <div class="context page10"><h1>마무리</h1>
+        <h3>텍스트 창 출력 기능 (1/19)</h3>
+        <p>
+            xlsx 파일에서 대사를 불러와 이를 "유니티 짱 캐릭터" 에게서 출력하게 하는 기능을 구현하였습니다.<br>
+        </p>
+        <h3>상인 카드 (1/19)</h3>
+        <p>
+            턴의 경과에 따라 "상인" 카드가 출현하도록하는 기능을 구현하였습니다. <br><br>
+            상인 카드의 경우, 다른 카드들과 다르게 클릭했을 때 상점 시스템을 이용할 수 있게하는 카드 입니다.<br>
+            <br><br>
+        </p>
+        <div class="temp">
+            <figure><img src="assets/images/0125/Talking.png" alt=""><figcaption><b>▲ [ 자료 16 ] 대사를 출력 중인 캐릭터</b></figcaption></figure>
+            <figure><img src="assets/images/0125/Shop.png" alt=""><figcaption><b>▲ [ 자료 17 ] "상인" 카드의 등장</b></figcaption></figure>
+        </div>
+        <div class="clearfix"></div>
+        <br><br>
+        <h3>프로젝트 병합 작업 (1/20 ~ 21)</h3>
+        <p>
+            각자 작업한 작업물을 서로 합치고, 디버깅하는 작업을 진행하였습니다.
+        </p>
+        <footer class="footer">   
+                                                                                                                                                                                                             
+        </footer>
     </div>
 </body>
 </html>
